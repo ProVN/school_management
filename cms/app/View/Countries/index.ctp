@@ -1,13 +1,13 @@
 		<script type="text/javascript">
-			function delete_category(category_id,element)
+			function delete(id,element)
 			{
-				var cfm = window.confirm('Are you sure want to delete this examination rules?');
+				var cfm = window.confirm('Bạn có chắc chắn muốn xóa quốc gia này?');
 				if(cfm == true) {
 					var column = element.parent();
 					var row = element.parents('tr');
 					var old_html = column.html();
 					$.ajax({
-						url:"<?php echo $this->Html->url(array('controller'=>'examination_rules','action'=>'delete'))?>/"+category_id,
+						url:"<?php echo $this->Html->url(array('controller'=>'countries','action'=>'delete'))?>/"+id,
 						dataType:"html",
 						beforeSend:function() {							column.html(get_mini_loading_image_html());
 						},
@@ -26,7 +26,7 @@
 		<div class="row-fluid sortable">		
 				<div class="box span12">
 					<div class="box-header well" data-original-title>
-						<h2><i class="icon-th"></i> Examination Rules</h2>
+						<h2><i class="icon-th"></i> Quốc gia</h2>
 						<div class="box-icon">
 							<!-- <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a> -->
 							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -35,39 +35,35 @@
 					</div>
 					<div class="box-content">
 						<div class="toolbar">
-							<a href="/examination_rules/add/" class="btn btn-primary">
+							<a href="/cms/countries/add/" class="btn btn-primary">
 								<i class="icon-white icon-plus"></i>
-								Add new rules
+								Thêm quốc gia mới
 							</a>
 						</div>
 						<?php echo $this->Element('index_status', array('item_name'=>'category'))?>
 						<table class="table table-striped table-bordered bootstrap-datatable datatable">
 						  <thead>
 							  <tr>
-								  <th>Rule Name</th>
-								  <th>Description</th>
-								  <th>Grades</th>
-								  <th>Actions</th>
+							  	  <th>Số thứ tự</th>
+								  <th>Tên quốc gia</th>
+								  <th>Ghi chú</th>
+								  <th></th>
 							  </tr>
 						  </thead>   
-						  <tbody id="category_list">
-						  	<?php foreach($examination_rule_list as $examination_rule):?>
+						  <tbody>
+						  	<?php foreach($datasource as $key => $item):?>
 							<tr>
-								<td><?php echo $examination_rule['ExaminationRule']['name']?></td>
-								<td class="center"><?php echo $examination_rule['ExaminationRule']['description']?></td>
-								<td class="center"><?php echo $examination_rule['rule_list']?></td>
-								<td class="center" style="width:320px">
-									<a class="btn btn-info" href="/examination_rules/edit/<?php echo $examination_rule['ExaminationRule']['id']?>/">
+								<td><?php echo $key+1?></td>
+								<td class="center"><?php echo $item['Country']['name']?></td>
+								<td class="center"><?php echo $item['Country']['description']?></td>
+								<td class="center" style="width:150px">
+									<a class="btn btn-info" href="/cms/countries/edit/<?php echo $item['Student']['id']?>/">
 										<i class="icon-edit icon-white"></i>  
-										Edit                                            
+										Sửa                            	                
 									</a>
-									<a class="btn btn-danger" href="javascript:void(0);" onclick="delete_category('<?php echo $examination_rule['ExaminationRule']['id']?>',$(this))">
+									<a class="btn btn-danger" href="javascript:void(0);" onclick="delete('<?php echo $item['Country']['id']?>',$(this))">
 										<i class="icon-trash icon-white"></i> 
 										Delete
-									</a>
-									<a class="btn btn-success" href="/examination_rules/preview/<?php echo $examination_rule['ExaminationRule']['id']?>/">
-										<i class="icon-play icon-white"></i> 
-										Generate examination
 									</a>
 								</td>
 							</tr>

@@ -4961,3 +4961,331 @@ Request URL: /administrators/
 Stack Trace:
 #0 D:\GitHub\examination_system\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-10-09 15:32:39 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. ',
+  'enabled' => true,
+)
+Request URL: /cms/members/
+Stack Trace:
+#0 D:\Github\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\Github\school_management\cms\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\Github\school_management\cms\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 D:\Github\school_management\cms\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 D:\Github\school_management\cms\lib\Cake\Model\Model.php(3551): Model->setSource('members')
+#5 D:\Github\school_management\cms\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#6 D:\Github\school_management\cms\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#7 D:\Github\school_management\cms\app\Controller\MembersController.php(5): Model->find('all')
+#8 [internal function]: MembersController->index()
+#9 D:\Github\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MembersController), Array)
+#10 D:\Github\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 D:\Github\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(MembersController), Object(CakeRequest))
+#12 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-10-09 15:56:52 Error: [MissingControllerException] Controller class StudentsController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/students/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 15:56:52 Error: [MissingControllerException] Controller class StudentsController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/students/css/bootstrap-cerulean.css
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 15:56:55 Error: [MissingControllerException] Controller class StudentsController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/students/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 15:56:55 Error: [MissingControllerException] Controller class StudentsController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/students/css/bootstrap-cerulean.css
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 15:56:57 Error: [MissingControllerException] Controller class StudentsController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/students/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 15:56:57 Error: [MissingControllerException] Controller class StudentsController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/students/css/bootstrap-cerulean.css
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 15:56:59 Error: [MissingControllerException] Controller class StudentsController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/students/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 15:56:59 Error: [MissingControllerException] Controller class StudentsController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/students/css/bootstrap-cerulean.css
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 15:57:03 Error: [MissingControllerException] Controller class StudentsController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/students/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 15:57:03 Error: [MissingControllerException] Controller class StudentsController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/students/css/bootstrap-cerulean.css
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 15:57:22 Error: [MissingControllerException] Controller class StudentsController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/students/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 15:57:25 Error: [MissingControllerException] Controller class StudentsController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/students/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 15:57:29 Error: [MissingControllerException] Controller class StudentsController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/students/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 15:57:43 Error: [MissingControllerException] Controller class StudentsController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/students/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 15:57:45 Error: [MissingControllerException] Controller class StudentsController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/students/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 15:58:09 Error: [MissingControllerException] Controller class StudentsController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/students/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 15:59:32 Error: [MissingControllerException] Controller class StudentsController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/students/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 15:59:40 Error: [MissingControllerException] Controller class StudentsController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/students/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 16:01:33 Error: [MissingControllerException] Controller class StudentsController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/students/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 16:12:03 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. ',
+  'enabled' => true,
+)
+Request URL: /cms/students/add/
+Stack Trace:
+#0 D:\Github\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\Github\school_management\cms\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\Github\school_management\cms\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 D:\Github\school_management\cms\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 D:\Github\school_management\cms\lib\Cake\Model\Model.php(3551): Model->setSource('categories')
+#5 D:\Github\school_management\cms\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#6 D:\Github\school_management\cms\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#7 D:\Github\school_management\cms\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('Category', 'fields')
+#8 D:\Github\school_management\cms\app\View\Students\form.ctp(12): FormHelper->create('Category', Array)
+#9 D:\Github\school_management\cms\lib\Cake\View\View.php(948): include('D:\\Github\\schoo...')
+#10 D:\Github\school_management\cms\lib\Cake\View\View.php(910): View->_evaluate('D:\\Github\\schoo...', Array)
+#11 D:\Github\school_management\cms\lib\Cake\View\View.php(471): View->_render('D:\\Github\\schoo...')
+#12 D:\Github\school_management\cms\lib\Cake\Controller\Controller.php(954): View->render('form', NULL)
+#13 D:\Github\school_management\cms\app\Controller\StudentsController.php(14): Controller->render('form')
+#14 [internal function]: StudentsController->add()
+#15 D:\Github\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#16 D:\Github\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#17 D:\Github\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest))
+#18 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2014-10-09 16:12:10 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. ',
+  'enabled' => true,
+)
+Request URL: /cms/students/add/
+Stack Trace:
+#0 D:\Github\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\Github\school_management\cms\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\Github\school_management\cms\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 D:\Github\school_management\cms\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 D:\Github\school_management\cms\lib\Cake\Model\Model.php(3551): Model->setSource('categories')
+#5 D:\Github\school_management\cms\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#6 D:\Github\school_management\cms\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#7 D:\Github\school_management\cms\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('Category', 'fields')
+#8 D:\Github\school_management\cms\app\View\Students\form.ctp(12): FormHelper->create('Category', Array)
+#9 D:\Github\school_management\cms\lib\Cake\View\View.php(948): include('D:\\Github\\schoo...')
+#10 D:\Github\school_management\cms\lib\Cake\View\View.php(910): View->_evaluate('D:\\Github\\schoo...', Array)
+#11 D:\Github\school_management\cms\lib\Cake\View\View.php(471): View->_render('D:\\Github\\schoo...')
+#12 D:\Github\school_management\cms\lib\Cake\Controller\Controller.php(954): View->render('form', NULL)
+#13 D:\Github\school_management\cms\app\Controller\StudentsController.php(14): Controller->render('form')
+#14 [internal function]: StudentsController->add()
+#15 D:\Github\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#16 D:\Github\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#17 D:\Github\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest))
+#18 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2014-10-09 16:12:27 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. ',
+  'enabled' => true,
+)
+Request URL: /cms/students/add/
+Stack Trace:
+#0 D:\Github\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\Github\school_management\cms\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\Github\school_management\cms\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 D:\Github\school_management\cms\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 D:\Github\school_management\cms\lib\Cake\Model\Model.php(3551): Model->setSource('categories')
+#5 D:\Github\school_management\cms\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#6 D:\Github\school_management\cms\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#7 D:\Github\school_management\cms\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('Category', 'fields')
+#8 D:\Github\school_management\cms\app\View\Students\form.ctp(12): FormHelper->create('Category', Array)
+#9 D:\Github\school_management\cms\lib\Cake\View\View.php(948): include('D:\\Github\\schoo...')
+#10 D:\Github\school_management\cms\lib\Cake\View\View.php(910): View->_evaluate('D:\\Github\\schoo...', Array)
+#11 D:\Github\school_management\cms\lib\Cake\View\View.php(471): View->_render('D:\\Github\\schoo...')
+#12 D:\Github\school_management\cms\lib\Cake\Controller\Controller.php(954): View->render('form', NULL)
+#13 D:\Github\school_management\cms\app\Controller\StudentsController.php(14): Controller->render('form')
+#14 [internal function]: StudentsController->add()
+#15 D:\Github\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#16 D:\Github\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#17 D:\Github\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest))
+#18 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2014-10-09 16:12:42 Error: [MissingTableException] Table categories for model Category was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'categories',
+  'class' => 'Category',
+  'ds' => 'default',
+)
+Request URL: /cms/students/add/
+Stack Trace:
+#0 D:\Github\school_management\cms\lib\Cake\Model\Model.php(3551): Model->setSource('categories')
+#1 D:\Github\school_management\cms\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 D:\Github\school_management\cms\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 D:\Github\school_management\cms\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('Category', 'fields')
+#4 D:\Github\school_management\cms\app\View\Students\form.ctp(12): FormHelper->create('Category', Array)
+#5 D:\Github\school_management\cms\lib\Cake\View\View.php(948): include('D:\\Github\\schoo...')
+#6 D:\Github\school_management\cms\lib\Cake\View\View.php(910): View->_evaluate('D:\\Github\\schoo...', Array)
+#7 D:\Github\school_management\cms\lib\Cake\View\View.php(471): View->_render('D:\\Github\\schoo...')
+#8 D:\Github\school_management\cms\lib\Cake\Controller\Controller.php(954): View->render('form', NULL)
+#9 D:\Github\school_management\cms\app\Controller\StudentsController.php(14): Controller->render('form')
+#10 [internal function]: StudentsController->add()
+#11 D:\Github\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#12 D:\Github\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 D:\Github\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest))
+#14 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-10-09 16:27:30 Error: [MissingControllerException] Controller class CountriesController could not be found.
+Exception Attributes: array (
+  'class' => 'CountriesController',
+  'plugin' => NULL,
+)
+Request URL: /cms/countries/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 16:28:39 Error: [MissingControllerException] Controller class CountriesController could not be found.
+Exception Attributes: array (
+  'class' => 'CountriesController',
+  'plugin' => NULL,
+)
+Request URL: /cms/countries/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 16:28:50 Error: [MissingControllerException] Controller class CountriesController could not be found.
+Exception Attributes: array (
+  'class' => 'CountriesController',
+  'plugin' => NULL,
+)
+Request URL: /cms/countries/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

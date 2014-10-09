@@ -32,7 +32,7 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 	 public $components = array('DebugKit.Toolbar','Session','RequestHandler');
-	 public $uses = array('Member','Question','Answer','Level','Grade','Category','ExaminationRule','ExaminationRuleLevel','ExaminationRuleGrade','MemberHistory');
+	 public $uses = array('Student','Country','Document','School');
 	 
 	 function beforeRender()
 	 {

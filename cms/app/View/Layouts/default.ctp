@@ -14,7 +14,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = __d('cake_dev', 'Examination Management Tools');
+$cakeDescription = __d('cake_dev', 'School Management');
 $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 ?>
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<meta name="author" content="Tran Ba Loc">
 	
 	<!-- The styles -->
-	<link id="bs-css" href="/css/bootstrap-cerulean.css" rel="stylesheet">
+	<link id="bs-css" href="/cms/css/bootstrap-cerulean.css" rel="stylesheet">
 	<style type="text/css">
 	  body {
 		padding-bottom: 40px;
@@ -39,27 +39,23 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		padding: 9px 0;
 	  }
 	</style>
-	
-	<?php
-		echo $this->Html->css('bootstrap-responsive');
-		echo $this->Html->css('charisma-app');
-		echo $this->Html->css('jquery-ui-1.8.21.custom');
-		echo $this->Html->css('fullcalendar');
-		echo $this->Html->css('fullcalendar.print');
-		echo $this->Html->css('chosen');
-		echo $this->Html->css('uniform.default');
-		echo $this->Html->css('colorbox');
-		echo $this->Html->css('jquery.cleditor');
-		echo $this->Html->css('jquery.noty');
-		echo $this->Html->css('noty_theme_default');
-		echo $this->Html->css('elfinder.min');
-		echo $this->Html->css('elfinder.theme');
-		echo $this->Html->css('jquery.iphone.toggle');
-		echo $this->Html->css('opa-icons');
-		echo $this->Html->css('uploadify');
-		echo $this->Html->css('survey');		
-		echo $this->Html->script('survey');
-	?>
+	<link href="/cms/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="/cms/css/charisma-app.css" rel="stylesheet">
+	<link href="/cms/css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
+	<link href='/cms/css/fullcalendar.css' rel='stylesheet'>
+	<link href='/cms/css/fullcalendar.print.css' rel='stylesheet'  media='print'>
+	<link href='/cms/css/chosen.css' rel='stylesheet'>
+	<link href='/cms/css/uniform.default.css' rel='stylesheet'>
+	<link href='/cms/css/colorbox.css' rel='stylesheet'>
+	<link href='/cms/css/jquery.cleditor.css' rel='stylesheet'>
+	<link href='/cms/css/jquery.noty.css' rel='stylesheet'>
+	<link href='/cms/css/noty_theme_default.css' rel='stylesheet'>
+	<link href='/cms/css/elfinder.min.css' rel='stylesheet'>
+	<link href='/cms/css/elfinder.theme.css' rel='stylesheet'>
+	<link href='/cms/css/jquery.iphone.toggle.css' rel='stylesheet'>
+	<link href='/cms/css/opa-icons.css' rel='stylesheet'>
+	<link href='/cms/css/uploadify.css' rel='stylesheet'>
+	<link href='/cms/css/survey.css' rel='stylesheet'>
 	<!-- jQuery -->
 	<script src="/js/jquery-1.7.2.min.js"></script>
 	<!-- jQuery UI -->
@@ -78,9 +74,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				</a>
 				<a class="brand" href="index.html"> 
 					<?php echo $this->Html->image('logo20.png')?>
-					<span>Ecomtree</span></a>
+					<span>School</span></a>
 				
 				<!-- theme selector starts -->
+				<!--
 				<div class="btn-group pull-right theme-container" >
 					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 						<i class="icon-tint"></i><span class="hidden-phone"> Change Theme / Skin</span>
@@ -98,6 +95,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 						<li><a data-value="united" href="#"><i class="icon-blank"></i> United</a></li>
 					</ul>
 				</div>
+				-->
 				<!-- theme selector ends -->
 				
 				<!-- user dropdown starts -->
@@ -107,23 +105,25 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Profile</a></li>
+						<li><a href="#">Thông tin</a></li>
 						<li class="divider"></li>
-						<li><a href="/administrators/logout/">Logout</a></li>
+						<li><a href="/cms/administrators/logout/">Thoát</a></li>
 					</ul>
 				</div>
 				<!-- user dropdown ends -->
-				
+				<!--
 				<div class="top-nav nav-collapse">
 					<ul class="nav">
-						<!-- <li><a href="#">Visit Site</a></li> -->
+						
 						<li>
 							<form class="navbar-search pull-left">
 								<input placeholder="Search" class="search-query span2" name="query" type="text">
 							</form>
 						</li>
 					</ul>
-				</div><!--/.nav-collapse -->
+				</div>
+				-->
+				<!--/.nav-collapse -->
 			</div>
 		</div>
 	</div>
@@ -136,16 +136,13 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<div class="span2 main-menu-span">
 				<div class="well nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
-						<li class="nav-header hidden-tablet">Main</li>
-						<li><a class="ajax-link" href="/"><i class="icon-home"></i><span class="hidden-tablet"> Dashboard</span></a></li>
-						<li><a class="ajax-link" href="/categories/"><i class="icon-th"></i><span class="hidden-tablet"> Categories</span></a></li>
-						<li><a class="ajax-link" href="/questions/"><i class="icon-edit"></i><span class="hidden-tablet"> Question Bank</span></a></li>
-						<li><a class="ajax-link" href="/examination_rules/"><i class="icon-list-alt"></i><span class="hidden-tablet"> Examination Rules</span></a></li>
-						<li><a class="ajax-link" href="/members/"><i class="icon-calendar"></i><span class="hidden-tablet"> Members</span></a></li>
-						<li class="nav-header hidden-tablet">Other settings</li>
-						<li><a class="ajax-link" href="/grades/"><i class="icon-align-justify"></i><span class="hidden-tablet"> Grades</span></a></li>
-						<li><a class="ajax-link" href="/levels/"><i class="icon-align-justify"></i><span class="hidden-tablet"> Levels</span></a></li>
-						<li><a class="ajax-link" href="/administrators/"><i class="icon-calendar"></i><span class="hidden-tablet"> Administrators</span></a></li>
+						<li class="nav-header hidden-tablet">Chức năng chính</li>
+						<li><a class="ajax-link" href="/cms/"><i class="icon-home"></i><span class="hidden-tablet"> Bảng điều khiển</span></a></li>
+						<li><a class="ajax-link" href="/cms/students/"><i class="icon-th"></i><span class="hidden-tablet"> Học viên</span></a></li>
+						<li class="nav-header hidden-tablet">Thiết lập khác</li>
+						<li><a class="ajax-link" href="/cms/schools/"><i class="icon-edit"></i><span class="hidden-tablet"> Trường học</span></a></li>
+						<li><a class="ajax-link" href="/cms/countries/"><i class="icon-list-alt"></i><span class="hidden-tablet"> Quốc gia</span></a></li>
+						<li><a class="ajax-link" href="/cms/administrators/"><i class="icon-calendar"></i><span class="hidden-tablet"> Quản trị viên</span></a></li>
 					</ul>
 					<!--<label id="for-is-ajax" class="hidden-tablet" for="is-ajax"><input id="is-ajax" type="checkbox"> Ajax on menu</label>-->
 				</div><!--/.well -->
@@ -197,8 +194,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		</div>
 
 		<footer>
-			<p class="pull-left">&copy; <a href="http://ecomtree" target="_blank">EcomTree</a> 2014</p>
-			<p class="pull-right">Powered by: <a href="http://ecomtree.com">EcomTree</a></p>
+			<p class="pull-left">&copy; <a href="mailto:htpthao1090@gmail.com" target="_blank">Thao Hoang</a> 2014</p>
+			<p class="pull-right">Powered by: <a href="mailto:htpthao1090@gmail.com">Thao Hoang</a></p>
 		</footer>
 		
 	</div>
@@ -209,70 +206,70 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<!-- Placed at the end of the document so the pages load faster -->
 	
 	<!-- transition / effect library -->
-	<script src="/js/bootstrap-transition.js"></script>
+	<script src="/cms/js/bootstrap-transition.js"></script>
 	<!-- alert enhancer library -->
-	<script src="/js/bootstrap-alert.js"></script>
+	<script src="/cms/js/bootstrap-alert.js"></script>
 	<!-- modal / dialog library -->
-	<script src="/js/bootstrap-modal.js"></script>
+	<script src="/cms/js/bootstrap-modal.js"></script>
 	<!-- custom dropdown library -->
-	<script src="/js/bootstrap-dropdown.js"></script>
+	<script src="/cms/js/bootstrap-dropdown.js"></script>
 	<!-- scrolspy library -->
-	<script src="/js/bootstrap-scrollspy.js"></script>
+	<script src="/cms/js/bootstrap-scrollspy.js"></script>
 	<!-- library for creating tabs -->
-	<script src="/js/bootstrap-tab.js"></script>
+	<script src="/cms/js/bootstrap-tab.js"></script>
 	<!-- library for advanced tooltip -->
-	<script src="/js/bootstrap-tooltip.js"></script>
+	<script src="/cms/js/bootstrap-tooltip.js"></script>
 	<!-- popover effect library -->
-	<script src="/js/bootstrap-popover.js"></script>
+	<script src="/cms/js/bootstrap-popover.js"></script>
 	<!-- button enhancer library -->
-	<script src="/js/bootstrap-button.js"></script>
+	<script src="/cms/js/bootstrap-button.js"></script>
 	<!-- accordion library (optional, not used in demo) -->
-	<script src="/js/bootstrap-collapse.js"></script>
+	<script src="/cms/js/bootstrap-collapse.js"></script>
 	<!-- carousel slideshow library (optional, not used in demo) -->
-	<script src="/js/bootstrap-carousel.js"></script>
+	<script src="/cms/js/bootstrap-carousel.js"></script>
 	<!-- autocomplete library -->
-	<script src="/js/bootstrap-typeahead.js"></script>
+	<script src="/cms/js/bootstrap-typeahead.js"></script>
 	<!-- tour library -->
-	<script src="/js/bootstrap-tour.js"></script>
+	<script src="/cms/js/bootstrap-tour.js"></script>
 	<!-- library for cookie management -->
-	<script src="/js/jquery.cookie.js"></script>
+	<script src="/cms/js/jquery.cookie.js"></script>
 	<!-- calander plugin -->
-	<script src='/js/fullcalendar.min.js'></script>
+	<script src='/cms/js/fullcalendar.min.js'></script>
 	<!-- data table plugin -->
-	<script src='/js/jquery.dataTables.min.js'></script>
+	<script src='/cms/js/jquery.dataTables.min.js'></script>
 
 	<!-- chart libraries start -->
-	<script src="/js/excanvas.js"></script>
-	<script src="/js/jquery.flot.min.js"></script>
-	<script src="/js/jquery.flot.pie.min.js"></script>
-	<script src="/js/jquery.flot.stack.js"></script>
-	<script src="/js/jquery.flot.resize.min.js"></script>
+	<script src="/cms/js/excanvas.js"></script>
+	<script src="/cms/js/jquery.flot.min.js"></script>
+	<script src="/cms/js/jquery.flot.pie.min.js"></script>
+	<script src="/cms/js/jquery.flot.stack.js"></script>
+	<script src="/cms/js/jquery.flot.resize.min.js"></script>
 	<!-- chart libraries end -->
 
 	<!-- select or dropdown enhancer -->
-	<script src="/js/jquery.chosen.min.js"></script>
+	<script src="/cms/js/jquery.chosen.min.js"></script>
 	<!-- checkbox, radio, and file input styler -->
-	<script src="/js/jquery.uniform.min.js"></script>
+	<script src="/cms/js/jquery.uniform.min.js"></script>
 	<!-- plugin for gallery image view -->
-	<script src="/js/jquery.colorbox.min.js"></script>
+	<script src="/cms/js/jquery.colorbox.min.js"></script>
 	<!-- rich text editor library -->
-	<script src="/js/jquery.cleditor.min.js"></script>
+	<script src="/cms/js/jquery.cleditor.min.js"></script>
 	<!-- notification plugin -->
-	<script src="/js/jquery.noty.js"></script>
+	<script src="/cms/js/jquery.noty.js"></script>
 	<!-- file manager library -->
-	<script src="/js/jquery.elfinder.min.js"></script>
+	<script src="/cms/js/jquery.elfinder.min.js"></script>
 	<!-- star rating plugin -->
-	<script src="/js/jquery.raty.min.js"></script>
+	<script src="/cms/js/jquery.raty.min.js"></script>
 	<!-- for iOS style toggle switch -->
-	<script src="/js/jquery.iphone.toggle.js"></script>
+	<script src="/cms/js/jquery.iphone.toggle.js"></script>
 	<!-- autogrowing textarea plugin -->
-	<script src="/js/jquery.autogrow-textarea.js"></script>
+	<script src="/cms/js/jquery.autogrow-textarea.js"></script>
 	<!-- multiple file upload plugin -->
-	<script src="/js/jquery.uploadify-3.1.min.js"></script>
+	<script src="/cms/js/jquery.uploadify-3.1.min.js"></script>
 	<!-- history.js for cross-browser state change on ajax -->
-	<script src="/js/jquery.history.js"></script>
+	<script src="/cms/js/jquery.history.js"></script>
 	<!-- application script for Charisma demo -->
-	<script src="/js/charisma.js"></script>
+	<script src="/cms/js/charisma.js"></script>
 		
 	<?php if($_SERVER['SERVER_NAME'] == 'localhost') echo $this->element('sql_dump'); ?>
 </body>

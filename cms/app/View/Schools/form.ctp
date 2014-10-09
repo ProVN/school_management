@@ -1,7 +1,7 @@
 		<div class="row-fluid sortable">
 				<div class="box span12">
 					<div class="box-header well" data-original-title>
-						<h2><i class="icon-edit"></i> Category information</h2>
+						<h2><i class="icon-edit"></i> Thông tin trường học</h2>
 						<div class="box-icon">
 							<!-- <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a> -->
 							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -9,29 +9,30 @@
 						</div>
 					</div>
 					<div class="box-content">
-						<?php echo $this->Form->create('Category', array('class'=>'form-horizontal'))?>
+						<?php echo $this->Form->create('School', array('class'=>'form-horizontal'))?>
 						<?php echo $this->Form->input('id')?>
 						  <fieldset>
 						  	<?php if(empty($this->data)):?>
-						  	<legend>Add New Category</legend>
+						  	<legend>Thêm trường học mới</legend>
 						  	<?php else :?>
-							<legend>Editing Category: <?php echo $this->data['Category']['name']?></legend>
-							<?php endif?>							
+							<legend>Sửa thông tin trường học : <?php echo $this->data['School']['name']?></legend>
+							<?php endif?>
 							<div class="control-group">
-							  <label class="control-label" for="typeahead">Category name </label>
+							  <label class="control-label" for="typeahead">Tên trường học</label>
 							  <div class="controls">
 							  	<?php echo $this->Form->input('name', array('label'=>false, 'class'=>'span7 typeahead'))?>
 							  </div>
 							</div>
 							<div class="control-group">
-							  <label class="control-label" for="textarea2">Description</label>
+							  <label class="control-label" for="typeahead">Ghi chú</label>
 							  <div class="controls">
-							  	<?php echo $this->Form->input('description', array('label'=>false, 'class'=>'cleditor','type'=>'textarea'))?>
+							  	<?php echo $this->Form->input('description', array('label'=>false, 'class'=>'span7 typeahead','type'=>'textarea'))?>
 							  </div>
 							</div>
+							
 							<div class="form-actions">
-							  <button type="submit" class="btn btn-primary">Save changes</button>
-							  <a href="/categories/" class="btn">Cancel</a>
+							  <button type="submit" class="btn btn-primary">Lưu lại</button>
+							  <a href="/cms/students/" class="btn">Hủy</a>
 							</div>
 						  </fieldset>
 						<?php echo $this->Form->end()?>

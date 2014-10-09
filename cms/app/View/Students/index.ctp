@@ -1,13 +1,13 @@
 		<script type="text/javascript">
-			function delete_category(category_id,element)
+			function delete(id,element)
 			{
-				var cfm = window.confirm('Are you sure want to delete this category?');
+				var cfm = window.confirm('Bạn có chắc chắn muốn xóa học viên này?');
 				if(cfm == true) {
 					var column = element.parent();
 					var row = element.parents('tr');
 					var old_html = column.html();
 					$.ajax({
-						url:"<?php echo $this->Html->url(array('controller'=>'categories','action'=>'delete'))?>/"+category_id,
+						url:"<?php echo $this->Html->url(array('controller'=>'students','action'=>'delete'))?>/"+id,
 						dataType:"html",
 						beforeSend:function() {							column.html(get_mini_loading_image_html());
 						},
@@ -26,7 +26,7 @@
 		<div class="row-fluid sortable">		
 				<div class="box span12">
 					<div class="box-header well" data-original-title>
-						<h2><i class="icon-th"></i> Examinations</h2>
+						<h2><i class="icon-th"></i> Học viên</h2>
 						<div class="box-icon">
 							<!-- <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a> -->
 							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -35,31 +35,37 @@
 					</div>
 					<div class="box-content">
 						<div class="toolbar">
-							<a href="/examinations/add/" class="btn btn-primary">
+							<a href="/cms/students/add/" class="btn btn-primary">
 								<i class="icon-white icon-plus"></i>
-								Generate new examination
+								Thêm học viên mới
 							</a>
 						</div>
 						<?php echo $this->Element('index_status', array('item_name'=>'category'))?>
 						<table class="table table-striped table-bordered bootstrap-datatable datatable">
 						  <thead>
 							  <tr>
-								  <th>Examination Name</th>
-								  <th>Description</th>
-								  <th>Actions</th>
+							  	  <th>Mã học viên</th>
+								  <th>Tên học viên</th>
+								  <th>Ngày sinh</th>
+								  <th>Trường</th>
+								  <th>Quốc gia</th>
+								  <th></th>
 							  </tr>
 						  </thead>   
-						  <tbody id="category_list">
-						  	<?php foreach($categories as $category):?>
+						  <tbody>
+						  	<?php foreach($datasource as $item):?>
 							<tr>
-								<td><?php echo $category['Category']['name']?></td>
-								<td class="center"><?php echo $category['Category']['description']?></td>
+								<td><?php echo $item['Student']['code']?></td>
+								<td class="center"><?php echo $item['Student']['name']?></td>
+								<td class="center"><?php echo $item['Student']['birthday']?></td>
+								<td class="center"><?php echo $item['School']['name']?></td>
+								<td class="center"><?php echo $item['Country']['name']?></td>
 								<td class="center" style="width:150px">
-									<a class="btn btn-info" href="/categories/edit/<?php echo $category['Category']['id']?>/">
+									<a class="btn btn-info" href="/cms/students/edit/<?php echo $item['Student']['id']?>/">
 										<i class="icon-edit icon-white"></i>  
-										Edit                                            
+										Sửa                            	                
 									</a>
-									<a class="btn btn-danger" href="javascript:void(0);" onclick="delete_category('<?php echo $category['Category']['id']?>',$(this))">
+									<a class="btn btn-danger" href="javascript:void(0);" onclick="delete('<?php echo $item['Student']['id']?>',$(this))">
 										<i class="icon-trash icon-white"></i> 
 										Delete
 									</a>
