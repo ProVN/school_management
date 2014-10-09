@@ -67,10 +67,10 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'ecomtree.com',
-		'login' => 'ecomtree_exam',
-		'password' => 'examx@X',
-		'database' => 'ecomtree_exam',
+		'host' => 'db4free.net',
+		'login' => 'baloctran',
+		'password' => 'thaohoang',
+		'database' => 'baloctranschool',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
