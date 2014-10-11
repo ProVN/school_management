@@ -5289,3 +5289,505 @@ Request URL: /cms/countries/
 Stack Trace:
 #0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-10-10 00:37:12 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cms/
+Stack Trace:
+#0 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-10 00:38:07 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cms/
+Stack Trace:
+#0 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-10 00:47:25 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cms/
+Stack Trace:
+#0 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-10 14:26:53 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'findAll' at line 1
+Request URL: /cms/students/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('findAll', Array)
+#2 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('findAll', Array, Array)
+#3 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(609): DboSource->fetchAll('findAll', Array, Array)
+#4 D:\Works\school_management\cms\lib\Cake\Model\Model.php(808): DboSource->query('findAll', Array, Object(AppModel))
+#5 D:\Works\school_management\cms\app\Controller\StudentsController.php(8): Model->__call('findAll', Array)
+#6 D:\Works\school_management\cms\app\Controller\StudentsController.php(8): AppModel->findAll()
+#7 [internal function]: StudentsController->index()
+#8 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#9 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest))
+#11 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-10-10 14:29:14 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'findAll' at line 1
+Request URL: /cms/students/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('findAll', Array)
+#2 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('findAll', Array, Array)
+#3 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(609): DboSource->fetchAll('findAll', Array, Array)
+#4 D:\Works\school_management\cms\lib\Cake\Model\Model.php(808): DboSource->query('findAll', Array, Object(AppModel))
+#5 D:\Works\school_management\cms\app\Controller\StudentsController.php(8): Model->__call('findAll', Array)
+#6 D:\Works\school_management\cms\app\Controller\StudentsController.php(8): AppModel->findAll()
+#7 [internal function]: StudentsController->index()
+#8 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#9 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest))
+#11 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-10-10 14:39:37 Error: [PDOException] SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE1\xBB\x85n T...' for column 'name' at row 1
+Request URL: /cms/schools/add/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `ba...', Array)
+#2 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `ba...')
+#3 D:\Works\school_management\cms\lib\Cake\Model\Model.php(1854): DboSource->create(Object(AppModel), Array, Array)
+#4 D:\Works\school_management\cms\app\Controller\SchoolsController.php(17): Model->save(Array)
+#5 [internal function]: SchoolsController->add()
+#6 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SchoolsController), Array)
+#7 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(SchoolsController), Object(CakeRequest))
+#9 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-10-10 14:39:39 Error: [PDOException] SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE1\xBB\x85n T...' for column 'name' at row 1
+Request URL: /cms/schools/add/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `ba...', Array)
+#2 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `ba...')
+#3 D:\Works\school_management\cms\lib\Cake\Model\Model.php(1854): DboSource->create(Object(AppModel), Array, Array)
+#4 D:\Works\school_management\cms\app\Controller\SchoolsController.php(17): Model->save(Array)
+#5 [internal function]: SchoolsController->add()
+#6 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SchoolsController), Array)
+#7 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(SchoolsController), Object(CakeRequest))
+#9 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-10-11 09:22:28 Error: [NotFoundException] Invalid school
+Request URL: /cms/schools/edit/3/
+Stack Trace:
+#0 [internal function]: SchoolsController->edit('3')
+#1 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SchoolsController), Array)
+#2 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#3 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(SchoolsController), Object(CakeRequest))
+#4 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-11 09:24:10 Error: [NotFoundException] Invalid school
+Request URL: /cms/schools/edit/1/
+Stack Trace:
+#0 [internal function]: SchoolsController->edit('1')
+#1 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SchoolsController), Array)
+#2 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#3 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(SchoolsController), Object(CakeRequest))
+#4 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-11 09:26:28 Error: Fatal Error (1): Call to a member function save() on a non-object in [D:\Works\school_management\cms\app\Controller\SchoolsController.php, line 56]
+2014-10-11 09:26:28 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /cms/schools/edit/3/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\Works\\school...', 56)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\Works\\school...', 56, Array)
+#2 D:\Works\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\Works\\school...', 56, Array)
+#3 D:\Works\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-11 09:27:06 Error: [PDOException] SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE1\xBB\x85n T...' for column 'description' at row 1
+Request URL: /cms/schools/edit/3/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('UPDATE `baloctr...', Array)
+#2 D:\Works\school_management\cms\lib\Cake\Model\Datasource\Database\Mysql.php(414): DboSource->execute('UPDATE `baloctr...')
+#3 D:\Works\school_management\cms\lib\Cake\Model\Model.php(1838): Mysql->update(Object(AppModel), Array, Array)
+#4 D:\Works\school_management\cms\app\Controller\SchoolsController.php(56): Model->save(Array)
+#5 [internal function]: SchoolsController->edit('3')
+#6 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SchoolsController), Array)
+#7 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(SchoolsController), Object(CakeRequest))
+#9 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-10-11 09:28:08 Error: [PDOException] SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE1\xBB\x85n T...' for column 'description' at row 1
+Request URL: /cms/schools/edit/3/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('UPDATE `baloctr...', Array)
+#2 D:\Works\school_management\cms\lib\Cake\Model\Datasource\Database\Mysql.php(414): DboSource->execute('UPDATE `baloctr...')
+#3 D:\Works\school_management\cms\lib\Cake\Model\Model.php(1838): Mysql->update(Object(AppModel), Array, Array)
+#4 D:\Works\school_management\cms\app\Controller\SchoolsController.php(56): Model->save(Array)
+#5 [internal function]: SchoolsController->edit('3')
+#6 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SchoolsController), Array)
+#7 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(SchoolsController), Object(CakeRequest))
+#9 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-10-11 09:29:06 Error: [PDOException] SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE1\xBB\x85n T...' for column 'description' at row 1
+Request URL: /cms/schools/edit/3/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('UPDATE `baloctr...', Array)
+#2 D:\Works\school_management\cms\lib\Cake\Model\Datasource\Database\Mysql.php(414): DboSource->execute('UPDATE `baloctr...')
+#3 D:\Works\school_management\cms\lib\Cake\Model\Model.php(1838): Mysql->update(Object(AppModel), Array, Array)
+#4 D:\Works\school_management\cms\app\Controller\SchoolsController.php(56): Model->save(Array)
+#5 [internal function]: SchoolsController->edit('3')
+#6 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SchoolsController), Array)
+#7 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(SchoolsController), Object(CakeRequest))
+#9 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-10-11 09:45:54 Error: [MissingControllerException] Controller class AdministratorsController could not be found.
+Exception Attributes: array (
+  'class' => 'AdministratorsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/administrators/
+Stack Trace:
+#0 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-11 09:53:40 Error: [PDOException] SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'description' for column 'school_id' at row 1
+Request URL: /cms/students/add/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `ba...', Array)
+#2 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `ba...')
+#3 D:\Works\school_management\cms\lib\Cake\Model\Model.php(1854): DboSource->create(Object(AppModel), Array, Array)
+#4 D:\Works\school_management\cms\app\Controller\StudentsController.php(17): Model->save(Array)
+#5 [internal function]: StudentsController->add()
+#6 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#7 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest))
+#9 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-10-11 10:14:09 Error: [MissingControllerException] Controller class AdministratorsController could not be found.
+Exception Attributes: array (
+  'class' => 'AdministratorsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/administrators/
+Stack Trace:
+#0 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-11 10:48:18 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [D:\Works\school_management\cms\lib\Cake\Config\config.php, line 19]
+2014-10-11 10:48:21 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /cms/students/add/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'D:\\Works\\school...', 19)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'D:\\Works\\school...', 19, Array)
+#2 D:\Works\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'D:\\Works\\school...', 19, Array)
+#3 D:\Works\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-11 11:05:14 Error: Fatal Error (1): Call to a member function find() on a non-object in [D:\Works\school_management\cms\app\Controller\StudentsController.php, line 57]
+2014-10-11 11:05:14 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cms/students/add/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\Works\\school...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\Works\\school...', 57, Array)
+#2 D:\Works\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\Works\\school...', 57, Array)
+#3 D:\Works\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-11 11:05:45 Error: Fatal Error (1): Call to a member function find() on a non-object in [D:\Works\school_management\cms\app\Controller\StudentsController.php, line 57]
+2014-10-11 11:05:45 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cms/students/add/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\Works\\school...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\Works\\school...', 57, Array)
+#2 D:\Works\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\Works\\school...', 57, Array)
+#3 D:\Works\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-11 11:05:48 Error: Fatal Error (1): Call to a member function find() on a non-object in [D:\Works\school_management\cms\app\Controller\StudentsController.php, line 57]
+2014-10-11 11:05:48 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cms/students/add/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\Works\\school...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\Works\\school...', 57, Array)
+#2 D:\Works\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\Works\\school...', 57, Array)
+#3 D:\Works\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-11 11:05:59 Error: Fatal Error (1): Call to a member function find() on a non-object in [D:\Works\school_management\cms\app\Controller\StudentsController.php, line 57]
+2014-10-11 11:05:59 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cms/students/add/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\Works\\school...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\Works\\school...', 57, Array)
+#2 D:\Works\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\Works\\school...', 57, Array)
+#3 D:\Works\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-11 11:24:41 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cms/
+Stack Trace:
+#0 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-11 11:37:27 Error: [MissingControllerException] Controller class AdministratorsController could not be found.
+Exception Attributes: array (
+  'class' => 'AdministratorsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/administrators/
+Stack Trace:
+#0 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-11 12:58:19 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. ',
+  'enabled' => true,
+)
+Request URL: /cms/countries/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\Works\school_management\cms\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\Works\school_management\cms\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 D:\Works\school_management\cms\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 D:\Works\school_management\cms\lib\Cake\Model\Model.php(3551): Model->setSource('countries')
+#5 D:\Works\school_management\cms\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#6 D:\Works\school_management\cms\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#7 D:\Works\school_management\cms\app\Controller\CountriesController.php(8): Model->find('all')
+#8 [internal function]: CountriesController->index()
+#9 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(CountriesController), Array)
+#10 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(CountriesController), Object(CakeRequest))
+#12 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-10-11 12:58:45 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. ',
+  'enabled' => true,
+)
+Request URL: /cms/countries/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\Works\school_management\cms\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\Works\school_management\cms\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 D:\Works\school_management\cms\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 D:\Works\school_management\cms\lib\Cake\Model\Model.php(3551): Model->setSource('countries')
+#5 D:\Works\school_management\cms\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#6 D:\Works\school_management\cms\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#7 D:\Works\school_management\cms\app\Controller\CountriesController.php(8): Model->find('all')
+#8 [internal function]: CountriesController->index()
+#9 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(CountriesController), Array)
+#10 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(CountriesController), Object(CakeRequest))
+#12 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-10-11 12:58:52 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. ',
+  'enabled' => true,
+)
+Request URL: /cms/countries/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\Works\school_management\cms\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\Works\school_management\cms\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 D:\Works\school_management\cms\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 D:\Works\school_management\cms\lib\Cake\Model\Model.php(3551): Model->setSource('countries')
+#5 D:\Works\school_management\cms\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#6 D:\Works\school_management\cms\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#7 D:\Works\school_management\cms\app\Controller\CountriesController.php(8): Model->find('all')
+#8 [internal function]: CountriesController->index()
+#9 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(CountriesController), Array)
+#10 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(CountriesController), Object(CakeRequest))
+#12 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-10-11 12:58:55 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. ',
+  'enabled' => true,
+)
+Request URL: /cms/schools/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\Works\school_management\cms\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\Works\school_management\cms\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 D:\Works\school_management\cms\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 D:\Works\school_management\cms\lib\Cake\Model\Model.php(3551): Model->setSource('schools')
+#5 D:\Works\school_management\cms\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#6 D:\Works\school_management\cms\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#7 D:\Works\school_management\cms\app\Controller\SchoolsController.php(8): Model->find('all')
+#8 [internal function]: SchoolsController->index()
+#9 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SchoolsController), Array)
+#10 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(SchoolsController), Object(CakeRequest))
+#12 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-10-11 12:58:57 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. ',
+  'enabled' => true,
+)
+Request URL: /cms/students/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\Works\school_management\cms\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\Works\school_management\cms\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 D:\Works\school_management\cms\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 D:\Works\school_management\cms\lib\Cake\Model\Model.php(3551): Model->setSource('students')
+#5 D:\Works\school_management\cms\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#6 D:\Works\school_management\cms\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#7 D:\Works\school_management\cms\app\Controller\StudentsController.php(8): Model->find('all')
+#8 [internal function]: StudentsController->index()
+#9 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#10 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest))
+#12 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-10-11 13:00:26 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. ',
+  'enabled' => true,
+)
+Request URL: /cms/students/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\Works\school_management\cms\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\Works\school_management\cms\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 D:\Works\school_management\cms\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 D:\Works\school_management\cms\lib\Cake\Model\Model.php(3551): Model->setSource('students')
+#5 D:\Works\school_management\cms\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#6 D:\Works\school_management\cms\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#7 D:\Works\school_management\cms\app\Controller\StudentsController.php(8): Model->find('all')
+#8 [internal function]: StudentsController->index()
+#9 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#10 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest))
+#12 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-10-11 13:08:05 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. ',
+  'enabled' => true,
+)
+Request URL: /cms/students/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\Works\school_management\cms\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\Works\school_management\cms\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 D:\Works\school_management\cms\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 D:\Works\school_management\cms\lib\Cake\Model\Model.php(3551): Model->setSource('students')
+#5 D:\Works\school_management\cms\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#6 D:\Works\school_management\cms\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#7 D:\Works\school_management\cms\app\Controller\StudentsController.php(8): Model->find('all')
+#8 [internal function]: StudentsController->index()
+#9 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#10 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest))
+#12 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-10-11 13:08:50 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. ',
+  'enabled' => true,
+)
+Request URL: /cms/students/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\Works\school_management\cms\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\Works\school_management\cms\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 D:\Works\school_management\cms\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 D:\Works\school_management\cms\lib\Cake\Model\Model.php(3551): Model->setSource('students')
+#5 D:\Works\school_management\cms\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#6 D:\Works\school_management\cms\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#7 D:\Works\school_management\cms\app\Controller\StudentsController.php(8): Model->find('all')
+#8 [internal function]: StudentsController->index()
+#9 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#10 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest))
+#12 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-10-11 13:20:01 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cms/
+Stack Trace:
+#0 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-11 13:26:17 Error: [MissingViewException] View file "D:\Works\school_management\cms\app\View\Administrators\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\Works\\school_management\\cms\\app\\View\\Administrators\\add.ctp',
+)
+Request URL: /cms/administrators/add/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AdministratorsController), Object(CakeRequest))
+#4 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-11 13:28:08 Error: [MissingViewException] View file "D:\Works\school_management\cms\app\View\Administrators\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\Works\\school_management\\cms\\app\\View\\Administrators\\add.ctp',
+)
+Request URL: /cms/administrators/add/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AdministratorsController), Object(CakeRequest))
+#4 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-11 13:29:31 Error: [MissingViewException] View file "D:\Works\school_management\cms\app\View\Administrators\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\Works\\school_management\\cms\\app\\View\\Administrators\\add.ctp',
+)
+Request URL: /cms/administrators/add/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AdministratorsController), Object(CakeRequest))
+#4 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-11 13:31:22 Error: [MissingViewException] View file "D:\Works\school_management\cms\app\View\Administrators\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\Works\\school_management\\cms\\app\\View\\Administrators\\add.ctp',
+)
+Request URL: /cms/administrators/add/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AdministratorsController), Object(CakeRequest))
+#4 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-11 13:33:24 Error: [MissingViewException] View file "D:\Works\school_management\cms\app\View\Administrators\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\Works\\school_management\\cms\\app\\View\\Administrators\\add.ctp',
+)
+Request URL: /cms/administrators/add/
+Stack Trace:
+#0 D:\Works\school_management\cms\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\Works\school_management\cms\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\Works\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AdministratorsController), Object(CakeRequest))
+#4 D:\Works\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

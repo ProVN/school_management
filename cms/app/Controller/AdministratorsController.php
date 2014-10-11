@@ -1,42 +1,38 @@
 <?php
 App::uses('AppController', 'Controller');
-class CountriesController extends AppController {
-	public function index() {
-			
-		//TASK_FOR_THAO: Em lấy data cho $datasource nhé 	
+class AdministratorsController extends AppController {
+	public function index() {	
 		$datasource = array();
-		$datasource = $this -> Country ->  find('all');	
+		$datasource = $this -> Administrator ->  find('all');	
 		$this->set('datasource',$datasource);
 	}
 
 	public function add() {
-		$this->prepareData();
 		if (empty($this -> data)) {
 			$this -> render('form');
 		} else {
 			if ($this->request->is('post')) {
-	          $this->Country->create();
-	          if ($this->Country->save($this->request->data)) {
+	          $this->Administrator->create();
+	          if ($this->Administrator->save($this->request->data)) {
 	          	$this->setAfterSave(true);
 				$this -> redirect_to_main_page();
             }
 			  else
-	          	$this->Session->setFlash(__('Unable to add your country.'));
+	          	$this->Session->setFlash(__('Unable to add.'));
 			}
 		}
 	}
 
 	public function edit($id) {
-		$this->prepareData();
-		$country = $this -> Country -> findById($id);
-		if ($country == null) {
+		$administrator = $this ->Administrator->findById($id);
+		if ($administrator == null) {
 			$this -> redirect_to_main_page();
 		} else {
 			if (empty($this -> data)) {
-				$this -> data = $country;
+				$this -> data = $administrator;
 				$this -> render('form');
 			} else {
-				$this -> Country -> save($this -> data);
+				$this -> Administrator -> save($this -> data);
 				$this->setAfterSave(true);
 				$this -> redirect_to_main_page();
 			}
@@ -44,7 +40,7 @@ class CountriesController extends AppController {
 	}
 
 	public function delete($id) {
-		$this -> Country -> delete($id);
+		$this -> Administrator -> delete($id);
 		$this -> render(false);
 	}
 
@@ -53,12 +49,5 @@ class CountriesController extends AppController {
 		return $this->redirect(array('action' => 'index'));
 	}
 	
-	private function prepareData()
-	{
-		$school_list = $this->School->find('all');
-		$country_list = $this->School->find('all');
-		$this->set('school_list',$school_list);
-		$this->set('country_list',$country_list);
-	}
 
 }

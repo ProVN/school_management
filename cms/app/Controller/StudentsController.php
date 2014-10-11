@@ -5,7 +5,7 @@ class StudentsController extends AppController {
 			
 		//TASK_FOR_THAO: Em lấy data cho $datasource nhé 	
 		$datasource = array();
-		
+		$datasource = $this -> Student -> find('all');
 		$this->set('datasource',$datasource);
 	}
 
@@ -14,9 +14,15 @@ class StudentsController extends AppController {
 		if (empty($this -> data)) {
 			$this -> render('form');
 		} else {
-			$this -> Student -> save($this -> data);
-			$this->setAfterSave(true);
-			$this -> redirect_to_main_page();
+			if ($this->request->is('post')) {
+	            $this->Student->create();
+	            if ($this->Student->save($this->request->data)) {
+	            	$this->setAfterSave(true);
+					$this -> redirect_to_main_page();
+	            }
+				else
+	           		 $this->Session->setFlash(__('Unable to add your student.'));
+			}
 		}
 	}
 
@@ -48,8 +54,8 @@ class StudentsController extends AppController {
 	
 	private function prepareData()
 	{
-		$school_list = $this->School->find('all');
-		$country_list = $this->School->find('all');
+		$school_list = $this->School->find('list');
+		$country_list = $this->Country->find('list');
 		$this->set('school_list',$school_list);
 		$this->set('country_list',$country_list);
 	}
