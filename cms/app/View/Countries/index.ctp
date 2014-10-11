@@ -57,7 +57,7 @@
 								<td class="center"><?php echo $item['Country']['name']?></td>
 								<td class="center"><?php echo $item['Country']['description']?></td>
 								<td class="center" style="width:150px">
-									<a class="btn btn-info" href="/cms/countries/edit/<?php echo $item['Student']['id']?>/">
+									<a class="btn btn-info" href="/cms/countries/edit/<?php echo $item['Country']['id']?>/">
 										<i class="icon-edit icon-white"></i>  
 										Sửa                            	                
 									</a>

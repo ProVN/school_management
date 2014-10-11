@@ -5,7 +5,7 @@ class CountriesController extends AppController {
 			
 		//TASK_FOR_THAO: Em lấy data cho $datasource nhé 	
 		$datasource = array();
-		
+		$datasource = $this -> Country ->  find('all');	
 		$this->set('datasource',$datasource);
 	}
 
@@ -14,16 +14,22 @@ class CountriesController extends AppController {
 		if (empty($this -> data)) {
 			$this -> render('form');
 		} else {
-			$this -> Country -> save($this -> data);
-			$this->setAfterSave(true);
-			$this -> redirect_to_main_page();
+			if ($this->request->is('post')) {
+	          $this->Country->create();
+	          if ($this->Country->save($this->request->data)) {
+	          	$this->setAfterSave(true);
+				$this -> redirect_to_main_page();
+            }
+			  else
+	          	$this->Session->setFlash(__('Unable to add your country.'));
+			}
 		}
 	}
 
 	public function edit($id) {
 		$this->prepareData();
 		$country = $this -> Country -> findById($id);
-		if ($student == null) {
+		if ($country == null) {
 			$this -> redirect_to_main_page();
 		} else {
 			if (empty($this -> data)) {
@@ -43,7 +49,8 @@ class CountriesController extends AppController {
 	}
 
 	private function redirect_to_main_page() {
-		$this -> redirect('/students/?result=success');
+		//$this -> redirect('/students/?result=success');
+		return $this->redirect(array('action' => 'index'));
 	}
 	
 	private function prepareData()
