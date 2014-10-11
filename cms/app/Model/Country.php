@@ -1,3 +1,4 @@
+<?php
 class Country extends AppModel {
     public $hasMany = array(
         'Student' => array(
@@ -5,3 +6,4 @@ class Country extends AppModel {
         )
     );
 }
+?>
