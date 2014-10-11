@@ -1,3 +1,4 @@
+<?php
 class Student extends AppModel {
     public $hasOne = 'StudentInfo';
     public $hasMany = array(
@@ -17,3 +18,4 @@ class Student extends AppModel {
         
     );
 }
+?>

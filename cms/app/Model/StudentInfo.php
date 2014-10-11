@@ -1,3 +1,4 @@
+<?php
 class StudentInfo extends AppModel {
     public $belongsTo = array(
         'Student' => array(
@@ -6,3 +7,4 @@ class StudentInfo extends AppModel {
         )
     );
 }
+?>

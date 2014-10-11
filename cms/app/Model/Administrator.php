@@ -1,2 +1,3 @@
-class Administrator extends AppModel {
+<?php class Administrator extends AppModel {
 }
+?>
