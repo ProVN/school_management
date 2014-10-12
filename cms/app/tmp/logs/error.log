@@ -5800,3 +5800,76 @@ Request URL: /cms/
 Stack Trace:
 #0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-10-12 16:38:51 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cms/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-12 16:56:07 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cms/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-12 17:21:09 Error: [PDOException] SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xCC\x80ng P...' for column 'name' at row 1
+Request URL: /cms/students/edit/2/
+Stack Trace:
+#0 D:\Github\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 D:\Github\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('UPDATE `baloctr...', Array)
+#2 D:\Github\school_management\cms\lib\Cake\Model\Datasource\Database\Mysql.php(414): DboSource->execute('UPDATE `baloctr...')
+#3 D:\Github\school_management\cms\lib\Cake\Model\Model.php(1838): Mysql->update(Object(Student), Array, Array)
+#4 D:\Github\school_management\cms\app\Controller\StudentsController.php(39): Model->save(Array)
+#5 [internal function]: StudentsController->edit('2')
+#6 D:\Github\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#7 D:\Github\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 D:\Github\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest))
+#9 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-10-12 17:23:51 Error: [PDOException] SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xCC\x83n C\xC3...' for column 'name' at row 1
+Request URL: /cms/schools/edit/1/
+Stack Trace:
+#0 D:\Github\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 D:\Github\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('UPDATE `baloctr...', Array)
+#2 D:\Github\school_management\cms\lib\Cake\Model\Datasource\Database\Mysql.php(414): DboSource->execute('UPDATE `baloctr...')
+#3 D:\Github\school_management\cms\lib\Cake\Model\Model.php(1838): Mysql->update(Object(School), Array, Array)
+#4 D:\Github\school_management\cms\app\Controller\SchoolsController.php(56): Model->save(Array)
+#5 [internal function]: SchoolsController->edit('1')
+#6 D:\Github\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SchoolsController), Array)
+#7 D:\Github\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 D:\Github\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(SchoolsController), Object(CakeRequest))
+#9 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-10-12 21:33:00 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cms/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-12 22:12:13 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cms/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-12 22:15:10 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cms/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

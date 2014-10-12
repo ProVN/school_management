@@ -1,10 +1,11 @@
 <?php
 class Student extends AppModel {
-    public $hasOne = 'StudentInfo';
+    
     public $hasMany = array(
         'Document' => array(
             'className' => 'Document'
-        )
+        ),
+		'StudentInfo'
     );
     public $belongsTo = array(
         'School' => array(
