@@ -24,7 +24,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
 
-        <title><?php $website_title?></title>
+        <title><?php echo $website_title?></title>
 
         <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
