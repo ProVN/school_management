@@ -130,7 +130,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                                 
          <div class="image-holder one" id="pic_prof_1" style="display:block">
         
-                <img class="head-image up circle" src="/upload/img/<?php echo $student['Student']['image_small']?>" width="150" height="150" alt="" />
+                <img class="head-image up circle" src="/upload/img/students/<?php echo $student['Student']['image_small']?>" width="150" height="150" alt="" />
                 <!--
                 <img class="head-image up-left circle" src="images/img/upleft.png" width="150" height="150" alt="" />
                 <img class="head-image left circle" src="images/img/left.png" width="150" height="150" alt="" />
@@ -161,20 +161,19 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
             <h6><span class="fa fa-map-marker"></span> <?php echo $student['Country']['name']?></h6>
         </div>
         <!-- End Profile info -->  
-    	
-        
-       
-    	
-        
         <!-- Name -->
         
         <!-- End Name -->  
     </div>
+    <?php if($student['School']['logo'] && $student['School']['logo'] != ''):?>
      <div id="profile_social" style="position: absolute; bottom: 0px">
              <div class="school_logo" style="background-color:white; padding:10px; padding-top:20px; padding-bottom:20px;">
-    			<img src="http://www.gconnect.edu.vn/wp-content/uploads/2014/06/LogoNew_Web_4.png" style="width: 100%"/>
+             	
+    			<img src="/upload/img/schools/<?php echo $student['School']['logo']?>" style="width: 100%"/>
+    			
     		</div>
      </div>
+     <?php endif?>
 </div>                                </div>
 
                                 <div class="col-md-9 flexy_content" style="padding-left: 0;padding-right: 0;">
@@ -205,7 +204,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                                             
                                             <li class="tabs-contact hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a" data-tab-name="logout"> 
                                                 <span class="tite-list">thoát</span>
-                                                <i class="fa fa-lock icon_menu"></i> 
+                                                <i class="fa fa-sign-out icon_menu"></i> 
                                             </li>
                                             
                                             
@@ -299,7 +298,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
     <div class="col-md-6 profile-r">
         <div class="cycle-slideshow">
-            <img src="/upload/img/<?php echo $student['Student']['image_large']?>" alt="<?php echo $student['Student']['name']?>" />
+            <img src="/upload/img/students/<?php echo $student['Student']['image_large']?>" alt="<?php echo $student['Student']['name']?>" />
         </div>
     </div>
 
@@ -755,7 +754,3 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         <![endif]-->
     </body>
 </html>
-<!--
-<?php echo $this -> fetch('content'); ?>
-<?php echo $this -> element('sql_dump'); ?>
--->
