@@ -1,0 +1,31 @@
+<<<<<<< HEAD
+<?php class Student extends AppModel {
+    public $hasOne = 'StudentInfo';
+=======
+<?php
+class Student extends AppModel {
+    
+>>>>>>> origin/master
+    public $hasMany = array(
+        'Document' => array(
+            'className' => 'Document'
+        ),
+		'StudentInfo'
+    );
+    public $belongsTo = array(
+        'School' => array(
+            'className' => 'School',
+            'foreignKey' => 'school_id'
+        ),
+        'Country' => array(
+        	'className' => 'Country',
+            'foreignKey' => 'country_id'
+        )
+    );
+<<<<<<< HEAD
+	
+}
+=======
+}
+?>
+>>>>>>> origin/master

@@ -69,6 +69,10 @@
 										<i class="icon-trash icon-white"></i> 
 										Delete
 									</a>
+									<a class="btn btn-info" href="/cms/documents/index/<?php echo $item['Student']['id']?>/">
+										<i class="icon-edit icon-white"></i>  
+										Xem tài liệu                            	                
+									</a>
 								</td>
 							</tr>
 							<?php endforeach ?>

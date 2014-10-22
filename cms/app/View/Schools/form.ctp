@@ -9,7 +9,7 @@
 						</div>
 					</div>
 					<div class="box-content">
-						<?php echo $this->Form->create('School', array('class'=>'form-horizontal'))?>
+						<?php echo $this->Form->create('School', array('class'=>'form-horizontal','enctype' => 'multipart/form-data'))?>
 						<?php echo $this->Form->input('id')?>
 						  <fieldset>
 						  	<?php if(empty($this->data)):?>
@@ -29,7 +29,12 @@
 							  	<?php echo $this->Form->input('description', array('label'=>false, 'class'=>'span7 typeahead','type'=>'textarea'))?>
 							  </div>
 							</div>
-							
+							<div class="control-group">
+							  <label class="control-label" for="typeahead">Logo</label>
+							  <div class="controls">
+							  	<?php echo $this->Form->input('logo_file', array('label'=>false, 'type'=>'file'))?>
+							  </div>
+							</div>
 							<div class="form-actions">
 							  <button type="submit" class="btn btn-primary">Lưu lại</button>
 							  <a href="/cms/students/" class="btn">Hủy</a>

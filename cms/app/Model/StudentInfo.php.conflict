@@ -1,0 +1,14 @@
+<<<<<<< HEAD
+<?php class StudentInfo extends AppModel {
+=======
+<?php
+class StudentInfo extends AppModel {
+>>>>>>> origin/master
+    public $belongsTo = array(
+        'Student' => array(
+            'className' => 'Student',
+            'foreignKey' => 'student_id'
+        )
+    );
+}
+?>

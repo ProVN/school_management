@@ -1,0 +1,19 @@
+<?php class Administrator extends AppModel {
+<<<<<<< HEAD
+	public $validate = array(
+	    'username' => array(
+	        'required'   => true,
+	        'allowEmpty' => false,
+	        'message'    => 'User name không được để trống!'
+	    ),
+	    'password' => array(
+	        'required'   => true,
+	        'allowEmpty' => false,
+	        'message'    => 'Password không được để trống!'
+	    )
+	);
+}
+=======
+}
+?>
+>>>>>>> origin/master

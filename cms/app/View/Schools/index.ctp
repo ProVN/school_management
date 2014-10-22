@@ -47,6 +47,7 @@
 							  	  <th>Số thứ tự</th>
 								  <th>Tên trường</th>
 								  <th>Ghi chú</th>
+								  <th>Logo</th>
 								  <th></th>
 							  </tr>
 						  </thead>   
@@ -56,6 +57,7 @@
 								<td><?php echo $key+1?></td>
 								<td class="center"><?php echo $item['School']['name']?></td>
 								<td class="center"><?php echo $item['School']['description']?></td>
+								<td class="center"><?php echo $item['School']['logo']?></td>
 								<td class="center" style="width:150px">
 									<a class="btn btn-info" href="/cms/schools/edit/<?php echo $item['School']['id']?>/">
 										<i class="icon-edit icon-white"></i>  

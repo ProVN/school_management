@@ -15,33 +15,21 @@ class SchoolsController extends AppController {
 			$this -> render('form');
 		} else {
 			if ($this->request->is('post')) {
-	            $this->School->create();
-	            if ($this->School->save($this->request->data)) {
+				$data = $this->data;
+		     	move_uploaded_file($data['School']['logo_file']['tmp_name'], WWW_ROOT . 'upload/' . $data['School']['logo_file']['name']);
+				$data['School']['logo'] = $data['School']['logo_file']['name'];
+	            if ($this->School->save($data)) {	
 	            	$this->setAfterSave(true);
 					$this -> redirect_to_main_page();
 	            }
 				else
-	           		 $this->Session->setFlash(__('Unable to add your school.'));
+	           	$this->Session->setFlash(__('Unable to add your school.'));
+				$this -> render('form');
 			}
 		}
 	}
 
-	public function edit($id) {
-		// $this->prepareData();
-		// $school = $this -> School -> findById($id);
-		// if ($student == null) {
-			// $this -> redirect_to_main_page();
-		// } else {
-			// if (empty($this -> data)) {
-				// $this -> data = $school;
-				// $this -> render('form');
-			// } else {
-				// $this -> School -> save($this -> data);
-				// $this->setAfterSave(true);
-				// $this -> redirect_to_main_page();
-			// }
-		// }
-		
+	public function edit($id) {		
 		if (!$id) {
 	        throw new NotFoundException(__('Invalid school'));
 	    }
@@ -52,8 +40,10 @@ class SchoolsController extends AppController {
 	    }
 	
 	    if ($this->request->is(array('post', 'put'))) {
-	        $this->School->id = $id;
-	        if ($this->School->save($this->request->data)) {
+			$data = $this->data;
+	     	move_uploaded_file($data['School']['logo_file']['tmp_name'], WWW_ROOT . 'upload/' . $data['School']['logo_file']['name']);
+			$data['School']['logo'] = $data['School']['logo_file']['name'];
+	        if ($this->School->save($data)) {
 	        	$this->setAfterSave(true);
 				$this->Session->setFlash(__('Your post has been updated.'));
 	            $this -> redirect_to_main_page();
