@@ -32,7 +32,7 @@
 							
 							<div class="form-actions">
 							  <button type="submit" class="btn btn-primary">Lưu lại</button>
-							  <a href="/cms/students/" class="btn">Hủy</a>
+							  <a href="/students/" class="btn">Hủy</a>
 							</div>
 						  </fieldset>
 						<?php echo $this->Form->end()?>

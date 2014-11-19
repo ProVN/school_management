@@ -36,7 +36,7 @@
 					</div>
 					<div class="box-content">
 						<div class="toolbar">
-							<a href="/cms/administrators/add/" class="btn btn-primary">
+							<a href="/administrators/add/" class="btn btn-primary">
 								<i class="icon-white icon-plus"></i>
 								Thêm quản trị viên mới
 							</a>
@@ -58,7 +58,7 @@
 								<td class="center"><?php echo $item['Administrator']['username']?></td>
 								<td class="center"><?php echo $item['Administrator']['password']?></td>
 								<td class="center" style="width:150px">
-									<a class="btn btn-info" href="/cms/administrators/edit/<?php echo $item['Administrator']['id']?>/">
+									<a class="btn btn-info" href="/administrators/edit/<?php echo $item['Administrator']['id']?>/">
 										<i class="icon-edit icon-white"></i>  
 										Sửa                            	                
 									</a>

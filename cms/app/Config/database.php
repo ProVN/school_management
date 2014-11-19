@@ -67,10 +67,10 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'db4free.net',
-		'login' => 'baloctran',
+		'host' => 'krea.vn',
+		'login' => 'ifu5448c_baloc',
 		'password' => 'thaohoang',
-		'database' => 'baloctranschool',
+		'database' => 'ifu5448c_schoolmanager',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);

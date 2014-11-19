@@ -16,8 +16,16 @@ class SchoolsController extends AppController {
 		} else {
 			if ($this->request->is('post')) {
 				$data = $this->data;
-		     	move_uploaded_file($data['School']['logo_file']['tmp_name'], WWW_ROOT . 'upload/' . $data['School']['logo_file']['name']);
-				$data['School']['logo'] = $data['School']['logo_file']['name'];
+				$file2 = $data['School']['logo_file'];
+				
+				if($file2['error'] == 0) {
+					$file_ext = pathinfo($file2['name'], PATHINFO_EXTENSION);
+					$file_name = $this->randomString().'.'.$file_ext;
+					if($this->uploadfile($file2['tmp_name'],'upload/img/students/'.$file_name)){
+						$data['School']['logo'] = $file_name;
+					}						
+				}
+		     	
 	            if ($this->School->save($data)) {	
 	            	$this->setAfterSave(true);
 					$this -> redirect_to_main_page();

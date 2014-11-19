@@ -35,7 +35,7 @@
 					</div>
 					<div class="box-content">
 						<div class="toolbar">
-							<a href="/cms/countries/add/" class="btn btn-primary">
+							<a href="/countries/add/" class="btn btn-primary">
 								<i class="icon-white icon-plus"></i>
 								Thêm quốc gia mới
 							</a>
@@ -57,7 +57,7 @@
 								<td class="center"><?php echo $item['Country']['name']?></td>
 								<td class="center"><?php echo $item['Country']['description']?></td>
 								<td class="center" style="width:150px">
-									<a class="btn btn-info" href="/cms/countries/edit/<?php echo $item['Country']['id']?>/">
+									<a class="btn btn-info" href="/countries/edit/<?php echo $item['Country']['id']?>/">
 										<i class="icon-edit icon-white"></i>  
 										Sửa                            	                
 									</a>

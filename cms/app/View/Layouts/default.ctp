@@ -20,7 +20,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <!DOCTYPE html>
 <html>
 <head>
-	<?php echo $this->Html->charset(); ?>
+	<?php echo $this -> Html -> charset(); ?>
 	<title>
 		<?php echo $cakeDescription ?>:
 		<?php echo $title_for_layout; ?>
@@ -30,32 +30,32 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<meta name="author" content="Tran Ba Loc">
 	
 	<!-- The styles -->
-	<link id="bs-css" href="/cms/css/bootstrap-cerulean.css" rel="stylesheet">
+	<link id="bs-css" href="/css/bootstrap-cerulean.css" rel="stylesheet">
 	<style type="text/css">
-	  body {
-		padding-bottom: 40px;
-	  }
-	  .sidebar-nav {
-		padding: 9px 0;
-	  }
+		body {
+			padding-bottom: 40px;
+		}
+		.sidebar-nav {
+			padding: 9px 0;
+		}
 	</style>
-	<link href="/cms/css/bootstrap-responsive.css" rel="stylesheet">
-	<link href="/cms/css/charisma-app.css" rel="stylesheet">
-	<link href="/cms/css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
-	<link href='/cms/css/fullcalendar.css' rel='stylesheet'>
-	<link href='/cms/css/fullcalendar.print.css' rel='stylesheet'  media='print'>
-	<link href='/cms/css/chosen.css' rel='stylesheet'>
-	<link href='/cms/css/uniform.default.css' rel='stylesheet'>
-	<link href='/cms/css/colorbox.css' rel='stylesheet'>
-	<link href='/cms/css/jquery.cleditor.css' rel='stylesheet'>
-	<link href='/cms/css/jquery.noty.css' rel='stylesheet'>
-	<link href='/cms/css/noty_theme_default.css' rel='stylesheet'>
-	<link href='/cms/css/elfinder.min.css' rel='stylesheet'>
-	<link href='/cms/css/elfinder.theme.css' rel='stylesheet'>
-	<link href='/cms/css/jquery.iphone.toggle.css' rel='stylesheet'>
-	<link href='/cms/css/opa-icons.css' rel='stylesheet'>
-	<link href='/cms/css/uploadify.css' rel='stylesheet'>
-	<link href='/cms/css/survey.css' rel='stylesheet'>
+	<link href="/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="/css/charisma-app.css" rel="stylesheet">
+	<link href="/css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
+	<link href='/css/fullcalendar.css' rel='stylesheet'>
+	<link href='/css/fullcalendar.print.css' rel='stylesheet'  media='print'>
+	<link href='/css/chosen.css' rel='stylesheet'>
+	<link href='/css/uniform.default.css' rel='stylesheet'>
+	<link href='/css/colorbox.css' rel='stylesheet'>
+	<link href='/css/jquery.cleditor.css' rel='stylesheet'>
+	<link href='/css/jquery.noty.css' rel='stylesheet'>
+	<link href='/css/noty_theme_default.css' rel='stylesheet'>
+	<link href='/css/elfinder.min.css' rel='stylesheet'>
+	<link href='/css/elfinder.theme.css' rel='stylesheet'>
+	<link href='/css/jquery.iphone.toggle.css' rel='stylesheet'>
+	<link href='/css/opa-icons.css' rel='stylesheet'>
+	<link href='/css/uploadify.css' rel='stylesheet'>
+	<link href='/css/survey.css' rel='stylesheet'>
 	<!-- jQuery -->
 	<script src="/js/jquery-1.7.2.min.js"></script>
 	<!-- jQuery UI -->
@@ -107,7 +107,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 					<ul class="dropdown-menu">
 						<li><a href="#">Thông tin</a></li>
 						<li class="divider"></li>
-						<li><a href="/cms/administrators/logout/">Thoát</a></li>
+						<li><a href="/administrators/logout/">Thoát</a></li>
 					</ul>
 				</div>
 				<!-- user dropdown ends -->
@@ -137,12 +137,13 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				<div class="well nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li class="nav-header hidden-tablet">Chức năng chính</li>
-						<li><a class="ajax-link" href="/cms/"><i class="icon-home"></i><span class="hidden-tablet"> Bảng điều khiển</span></a></li>
-						<li><a class="ajax-link" href="/cms/students/"><i class="icon-th"></i><span class="hidden-tablet"> Học viên</span></a></li>
+						<li><a class="ajax-link" href="/"><i class="icon-home"></i><span class="hidden-tablet"> Bảng điều khiển</span></a></li>
+						<li><a class="ajax-link" href="/students/"><i class="icon-th"></i><span class="hidden-tablet"> Học viên</span></a></li>
 						<li class="nav-header hidden-tablet">Thiết lập khác</li>
-						<li><a class="ajax-link" href="/cms/schools/"><i class="icon-edit"></i><span class="hidden-tablet"> Trường học</span></a></li>
-						<li><a class="ajax-link" href="/cms/countries/"><i class="icon-list-alt"></i><span class="hidden-tablet"> Quốc gia</span></a></li>
-						<li><a class="ajax-link" href="/cms/administrators/"><i class="icon-calendar"></i><span class="hidden-tablet"> Quản trị viên</span></a></li>
+						<li><a class="ajax-link" href="/schools/"><i class="icon-edit"></i><span class="hidden-tablet"> Trường học</span></a></li>
+						<li><a class="ajax-link" href="/countries/"><i class="icon-list-alt"></i><span class="hidden-tablet"> Quốc gia</span></a></li>
+						<li><a class="ajax-link" href="/administrators/"><i class="icon-calendar"></i><span class="hidden-tablet"> Quản trị viên</span></a></li>
+						<li><a class="ajax-link" href="/contacts/"><i class="icon-calendar"></i><span class="hidden-tablet"> Liên hệ</span></a></li>
 					</ul>
 					<!--<label id="for-is-ajax" class="hidden-tablet" for="is-ajax"><input id="is-ajax" type="checkbox"> Ajax on menu</label>-->
 				</div><!--/.well -->
@@ -170,9 +171,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 					</li>
 				</ul>
 			</div>
-			<?php echo $this->Session->flash(); ?>
+			<?php echo $this -> Session -> flash(); ?>
 
-			<?php echo $this->fetch('content'); ?>
+			<?php echo $this -> fetch('content'); ?>
 			<!-- content ends -->
 			</div><!--/#content.span10-->
 				</div><!--/fluid-row-->
@@ -206,71 +207,71 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<!-- Placed at the end of the document so the pages load faster -->
 	
 	<!-- transition / effect library -->
-	<script src="/cms/js/bootstrap-transition.js"></script>
+	<script src="/js/bootstrap-transition.js"></script>
 	<!-- alert enhancer library -->
-	<script src="/cms/js/bootstrap-alert.js"></script>
+	<script src="/js/bootstrap-alert.js"></script>
 	<!-- modal / dialog library -->
-	<script src="/cms/js/bootstrap-modal.js"></script>
+	<script src="/js/bootstrap-modal.js"></script>
 	<!-- custom dropdown library -->
-	<script src="/cms/js/bootstrap-dropdown.js"></script>
+	<script src="/js/bootstrap-dropdown.js"></script>
 	<!-- scrolspy library -->
-	<script src="/cms/js/bootstrap-scrollspy.js"></script>
+	<script src="/js/bootstrap-scrollspy.js"></script>
 	<!-- library for creating tabs -->
-	<script src="/cms/js/bootstrap-tab.js"></script>
+	<script src="/js/bootstrap-tab.js"></script>
 	<!-- library for advanced tooltip -->
-	<script src="/cms/js/bootstrap-tooltip.js"></script>
+	<script src="/js/bootstrap-tooltip.js"></script>
 	<!-- popover effect library -->
-	<script src="/cms/js/bootstrap-popover.js"></script>
+	<script src="/js/bootstrap-popover.js"></script>
 	<!-- button enhancer library -->
-	<script src="/cms/js/bootstrap-button.js"></script>
+	<script src="/js/bootstrap-button.js"></script>
 	<!-- accordion library (optional, not used in demo) -->
-	<script src="/cms/js/bootstrap-collapse.js"></script>
+	<script src="/js/bootstrap-collapse.js"></script>
 	<!-- carousel slideshow library (optional, not used in demo) -->
-	<script src="/cms/js/bootstrap-carousel.js"></script>
+	<script src="/js/bootstrap-carousel.js"></script>
 	<!-- autocomplete library -->
-	<script src="/cms/js/bootstrap-typeahead.js"></script>
+	<script src="/js/bootstrap-typeahead.js"></script>
 	<!-- tour library -->
-	<script src="/cms/js/bootstrap-tour.js"></script>
+	<script src="/js/bootstrap-tour.js"></script>
 	<!-- library for cookie management -->
-	<script src="/cms/js/jquery.cookie.js"></script>
+	<script src="/js/jquery.cookie.js"></script>
 	<!-- calander plugin -->
-	<script src='/cms/js/fullcalendar.min.js'></script>
+	<script src='/js/fullcalendar.min.js'></script>
 	<!-- data table plugin -->
-	<script src='/cms/js/jquery.dataTables.min.js'></script>
+	<script src='/js/jquery.dataTables.min.js'></script>
 
 	<!-- chart libraries start -->
-	<script src="/cms/js/excanvas.js"></script>
-	<script src="/cms/js/jquery.flot.min.js"></script>
-	<script src="/cms/js/jquery.flot.pie.min.js"></script>
-	<script src="/cms/js/jquery.flot.stack.js"></script>
-	<script src="/cms/js/jquery.flot.resize.min.js"></script>
+	<script src="/js/excanvas.js"></script>
+	<script src="/js/jquery.flot.min.js"></script>
+	<script src="/js/jquery.flot.pie.min.js"></script>
+	<script src="/js/jquery.flot.stack.js"></script>
+	<script src="/js/jquery.flot.resize.min.js"></script>
 	<!-- chart libraries end -->
 
 	<!-- select or dropdown enhancer -->
-	<script src="/cms/js/jquery.chosen.min.js"></script>
+	<script src="/js/jquery.chosen.min.js"></script>
 	<!-- checkbox, radio, and file input styler -->
-	<script src="/cms/js/jquery.uniform.min.js"></script>
+	<script src="/js/jquery.uniform.min.js"></script>
 	<!-- plugin for gallery image view -->
-	<script src="/cms/js/jquery.colorbox.min.js"></script>
+	<script src="/js/jquery.colorbox.min.js"></script>
 	<!-- rich text editor library -->
-	<script src="/cms/js/jquery.cleditor.min.js"></script>
+	<script src="/js/jquery.cleditor.min.js"></script>
 	<!-- notification plugin -->
-	<script src="/cms/js/jquery.noty.js"></script>
+	<script src="/js/jquery.noty.js"></script>
 	<!-- file manager library -->
-	<script src="/cms/js/jquery.elfinder.min.js"></script>
+	<script src="/js/jquery.elfinder.min.js"></script>
 	<!-- star rating plugin -->
-	<script src="/cms/js/jquery.raty.min.js"></script>
+	<script src="/js/jquery.raty.min.js"></script>
 	<!-- for iOS style toggle switch -->
-	<script src="/cms/js/jquery.iphone.toggle.js"></script>
+	<script src="/js/jquery.iphone.toggle.js"></script>
 	<!-- autogrowing textarea plugin -->
-	<script src="/cms/js/jquery.autogrow-textarea.js"></script>
+	<script src="/js/jquery.autogrow-textarea.js"></script>
 	<!-- multiple file upload plugin -->
-	<script src="/cms/js/jquery.uploadify-3.1.min.js"></script>
+	<script src="/js/jquery.uploadify-3.1.min.js"></script>
 	<!-- history.js for cross-browser state change on ajax -->
-	<script src="/cms/js/jquery.history.js"></script>
+	<script src="/js/jquery.history.js"></script>
 	<!-- application script for Charisma demo -->
-	<script src="/cms/js/charisma.js"></script>
+	<script src="/js/charisma.js"></script>
 		
-	<?php if($_SERVER['SERVER_NAME'] == 'localhost') echo $this->element('sql_dump'); ?>
+	<!--<?php if($_SERVER['SERVER_NAME'] == 'localhost') echo $this->element('sql_dump'); ?>
 </body>
 </html>

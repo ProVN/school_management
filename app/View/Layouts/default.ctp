@@ -254,7 +254,13 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
             <li>
                 <i class="glyphicon glyphicon-calendar"></i>
                 <label>Ngày sinh</label>
-                <span class="value"><?php echo $student['Student']['birthday']?></span>
+                <span class="value">               	
+                	<?php 
+                		$date = date_create($student['Student']['birthday']);
+						$result = $date->format('d/m/Y');
+						echo $result;
+                	?>
+                </span>
                 <div class="clear"></div>
             </li>
             <li> 
@@ -298,7 +304,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
     <div class="col-md-6 profile-r">
         <div class="cycle-slideshow">
+        	<?php if($student['Student']['image_large'] != ""):?>
             <img src="/upload/img/students/<?php echo $student['Student']['image_large']?>" alt="<?php echo $student['Student']['name']?>" />
+            <?php endif?>
         </div>
     </div>
 
@@ -433,10 +441,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                                                             </div>
 
                                                             <ul>
-                                                                <li><span class="span-info"><i class="glyphicon glyphicon-map-marker"></i> Địa chỉ:</span> 17 Bis, Tú Xương, phường 7, Hồ Chí Minh.<br /><br /></li>
-                                                                <li><span class="span-info"><i class="glyphicon glyphicon-envelope"></i> Email:</span> info@gconnect.edu.vn</li>
-                                                                <li><span class="span-info"><i class="glyphicon glyphicon-phone"></i> Số điện thoại:</span> 08 3932 5255</li>
-                                                                <li><span class="span-info"><i class="glyphicon glyphicon-globe"></i> Website:</span> www.gconnect.edu.vn</li>                                                                
+                                                                <li><span class="span-info"><i class="glyphicon glyphicon-map-marker"></i> Địa chỉ:</span> <?php echo $contact['Contact']['address']?><br /><br /></li>
+                                                                <li><span class="span-info"><i class="glyphicon glyphicon-envelope"></i> Email:</span> <?php echo $contact['Contact']['email']?></li>
+                                                                <li><span class="span-info"><i class="glyphicon glyphicon-phone"></i> Số điện thoại:</span> <?php echo $contact['Contact']['phone']?></li>
+                                                                <li><span class="span-info"><i class="glyphicon glyphicon-globe"></i> Website:</span> <?php echo $contact['Contact']['website']?></li>                                                                
                                                             </ul>
                                                         </div>
                                                         <!-- /Contact Info -->
@@ -452,11 +460,13 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                                                     
 
                                                             <div id="profile_social">
-                                                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                                                <a href="https://www.facebook.com/GConnect.Education" target="_blank"><i class="fa fa-facebook"></i></a>
                                                                 <a href="#"><i class="fa fa-twitter"></i></a>
+                                                                <!--
                                                                 <a href="#"><i class="fa fa-linkedin"></i></a>
                                                                 <a href="#"><i class="fa fa fa-dribbble"></i></a>
                                                                 <a href="#"><i class="fa fa-foursquare"></i></a>
+                                                                -->
                                                                 <div class="clear"></div>
                                                             </div>
                                               
@@ -683,7 +693,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
         <!-- Js | switcher -->
         <!-- Credits: http://themeforest.net/user/FlexyCodes -->
-        <script type="text/javascript" src="/js/jsSwitcher/switcher.js"></script>	
+        <!--<script type="text/javascript" src="/js/jsSwitcher/switcher.js"></script>-->	
 
         <!-- Js | mCustomScrollbar -->
         <!-- Credits: http://manos.malihu.gr/jquery-custom-content-scroller -->

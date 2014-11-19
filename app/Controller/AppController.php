@@ -33,7 +33,7 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 	
 	public $components = array('Session','RequestHandler');
-	public $uses = array('Student','Country','Document','School','FeedBack');
+	public $uses = array('Student','Country','Document','School','FeedBack','Contact');
 	
 	function beforeRender()
 	{
@@ -44,7 +44,9 @@ class AppController extends Controller {
 			$this->redirect('/login/');
 		}
 		$this->set('website_title',$student['Student']['name'].' - G\'Connect Education');
-		
 		$this->set('student',$student);
+		
+		$contact = $this->Contact->findById(1);
+		$this->set('contact',$contact);
 	} 
 }

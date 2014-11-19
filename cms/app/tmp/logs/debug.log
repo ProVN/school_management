@@ -1,0 +1,10 @@
+2014-11-02 05:42:07 Debug: Notice (8): Uninitialized string offset: 62 in [D:\Github\school_management\cms\app\Controller\AppController.php, line 88]
+Trace:
+AppController::randomString() - APP\Controller\AppController.php, line 88
+StudentsController::edit() - APP\Controller\StudentsController.php, line 46
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 191
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 165
+[main] - APP\webroot\index.php, line 108
+

@@ -32,7 +32,7 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 	 public $components = array('DebugKit.Toolbar','Session','RequestHandler');
-	 public $uses = array('Student','Country','Document','School');
+	 public $uses = array('Student','Country','Document','School','DocumentType','StudentInfo','Contact');
 	 
 	 function beforeRender()
 	 {
@@ -58,5 +58,34 @@ class AppController extends Controller {
 	 
 	 function setAfterSave($value) {
 		$this->Session->write('AFTER_SAVED',$value);
-	 }	 
+	 }
+	 
+	 function uploadfile($source_file,$server_file_path)
+	 {
+		$remote_file = '/public_html/app/webroot/'.$server_file_path;		
+		$ftp_server = Configure::read('FRONT_END_FTP_URL');
+		$ftp_user_name = Configure::read('FRONT_END_FTP_UID');
+		$ftp_user_pass = Configure::read('FRONT_END_FTP_PWD');
+		$return_val = false;
+		// set up basic connection
+		$conn_id = ftp_connect($ftp_server);
+		// login with username and password
+		$login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
+		// upload a file
+		// ftp_delete($conn_id, $remote_file);
+		if (ftp_put($conn_id, $remote_file, $source_file, FTP_BINARY))
+		 	$return_val = true;
+		// close the connection
+		ftp_close($conn_id);
+		return $return_val;
+	 }
+
+	function randomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, strlen($characters) - 1)];
+    }
+    return $randomString;
+} 
 }

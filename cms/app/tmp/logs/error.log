@@ -5873,3 +5873,262 @@ Request URL: /cms/
 Stack Trace:
 #0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-11-02 04:09:15 Error: [MissingControllerException] Controller class CmsController could not be found.
+Exception Attributes: array (
+  'class' => 'CmsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/documents/index/4/
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-02 04:22:10 Error: [MissingControllerException] Controller class CmsController could not be found.
+Exception Attributes: array (
+  'class' => 'CmsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/documents/add/1
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-02 04:40:06 Error: Fatal Error (4): syntax error, unexpected '?>', expecting ']' in [D:\Github\school_management\cms\app\View\Students\form.ctp, line 66]
+2014-11-02 04:40:06 Error: [FatalErrorException] syntax error, unexpected '?>', expecting ']'
+Request URL: /students/edit/1/
+Stack Trace:
+#0 D:\Github\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\\Github\\schoo...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\\Github\\schoo...', 66, Array)
+#2 D:\Github\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\\Github\\schoo...', 66, Array)
+#3 D:\Github\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-02 04:44:05 Error: [MissingControllerException] Controller class UploadController could not be found.
+Exception Attributes: array (
+  'class' => 'UploadController',
+  'plugin' => NULL,
+)
+Request URL: /upload/img/students/tbloc_small.jpg
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-02 04:44:07 Error: [MissingControllerException] Controller class UploadController could not be found.
+Exception Attributes: array (
+  'class' => 'UploadController',
+  'plugin' => NULL,
+)
+Request URL: /upload/img/students/tbloc_small.jpg
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-02 05:42:09 Warning: Warning (2): ftp_delete() [<a href='http://php.net/function.ftp-delete'>function.ftp-delete</a>]: Could not delete /htdocs/app/webroot/upload/img/students/tblocw.jpg: No such file or directory in [D:\Github\school_management\cms\app\Controller\AppController.php, line 75]
+Trace:
+ftp_delete - [internal], line ??
+AppController::uploadfile() - APP\Controller\AppController.php, line 75
+StudentsController::edit() - APP\Controller\StudentsController.php, line 47
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 191
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 165
+[main] - APP\webroot\index.php, line 108
+
+2014-11-02 05:43:09 Error: [MissingControllerException] Controller class CmsController could not be found.
+Exception Attributes: array (
+  'class' => 'CmsController',
+  'plugin' => NULL,
+)
+Request URL: /cms/documents/add/1
+Stack Trace:
+#0 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-02 05:43:54 Error: Fatal Error (1): Call to a member function find() on a non-object in [D:\Github\school_management\cms\app\Controller\DocumentsController.php, line 65]
+2014-11-02 05:43:54 Error: [InternalErrorException] Internal Server Error
+Request URL: /documents/add/1
+Stack Trace:
+#0 D:\Github\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\Github\\schoo...', 65)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\Github\\schoo...', 65, Array)
+#2 D:\Github\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\Github\\schoo...', 65, Array)
+#3 D:\Github\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-02 05:44:08 Error: Fatal Error (1): Call to a member function find() on a non-object in [D:\Github\school_management\cms\app\Controller\DocumentsController.php, line 65]
+2014-11-02 05:44:08 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /documents/add/1
+Stack Trace:
+#0 D:\Github\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\Github\\schoo...', 65)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\Github\\schoo...', 65, Array)
+#2 D:\Github\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\Github\\schoo...', 65, Array)
+#3 D:\Github\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-02 05:44:45 Error: Fatal Error (1): Call to a member function find() on a non-object in [D:\Github\school_management\cms\app\Controller\DocumentsController.php, line 65]
+2014-11-02 05:44:45 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /documents/add/1
+Stack Trace:
+#0 D:\Github\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\Github\\schoo...', 65)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\Github\\schoo...', 65, Array)
+#2 D:\Github\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\Github\\schoo...', 65, Array)
+#3 D:\Github\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-02 05:49:04 Error: Fatal Error (1): Call to a member function randomString() on a non-object in [D:\Github\school_management\cms\app\Controller\DocumentsController.php, line 22]
+2014-11-02 05:49:04 Error: [FatalErrorException] Call to a member function randomString() on a non-object
+Request URL: /documents/add/1
+Stack Trace:
+#0 D:\Github\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\Github\\schoo...', 22)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\Github\\schoo...', 22, Array)
+#2 D:\Github\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\Github\\schoo...', 22, Array)
+#3 D:\Github\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-02 05:51:37 Error: [MissingActionException] Action DocumentsController::1() could not be found.
+Exception Attributes: array (
+  'controller' => 'DocumentsController',
+  'action' => '1',
+)
+Request URL: /documents/1
+Stack Trace:
+#0 D:\Github\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\Github\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(DocumentsController), Object(CakeRequest))
+#2 D:\Github\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-02 06:24:55 Error: Fatal Error (4): syntax error, unexpected 'else' (T_ELSE) in [D:\Github\school_management\cms\app\View\Documents\form.ctp, line 22]
+2014-11-02 06:24:55 Error: [FatalErrorException] syntax error, unexpected 'else' (T_ELSE)
+Request URL: /documents/edit/2/
+Stack Trace:
+#0 D:\Github\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\\Github\\schoo...', 22)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\\Github\\schoo...', 22, Array)
+#2 D:\Github\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\\Github\\schoo...', 22, Array)
+#3 D:\Github\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-02 02:05:01 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /robots.txt
+Stack Trace:
+#0 /home/vol11_7/byethost10.com/b10_15505973/htdocs/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-02 02:05:04 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /robots.txt
+Stack Trace:
+#0 /home/vol11_7/byethost10.com/b10_15505973/htdocs/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-02 02:05:05 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /robots.txt
+Stack Trace:
+#0 /home/vol11_7/byethost10.com/b10_15505973/htdocs/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-02 02:05:05 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /robots.txt
+Stack Trace:
+#0 /home/vol11_7/byethost10.com/b10_15505973/htdocs/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-02 02:05:06 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /robots.txt
+Stack Trace:
+#0 /home/vol11_7/byethost10.com/b10_15505973/htdocs/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-02 02:05:11 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /robots.txt
+Stack Trace:
+#0 /home/vol11_7/byethost10.com/b10_15505973/htdocs/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-02 02:05:13 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /robots.txt
+Stack Trace:
+#0 /home/vol11_7/byethost10.com/b10_15505973/htdocs/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-02 02:05:39 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /robots.txt
+Stack Trace:
+#0 /home/vol11_7/byethost10.com/b10_15505973/htdocs/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-02 02:05:50 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /robots.txt
+Stack Trace:
+#0 /home/vol11_7/byethost10.com/b10_15505973/htdocs/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-02 02:05:55 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /robots.txt
+Stack Trace:
+#0 /home/vol11_7/byethost10.com/b10_15505973/htdocs/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-02 02:07:52 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /robots.txt
+Stack Trace:
+#0 /home/vol11_7/byethost10.com/b10_15505973/htdocs/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-03 08:10:05 Error: [MissingActionException] Action DocumentsController::6() could not be found.
+Exception Attributes: array (
+  'controller' => 'DocumentsController',
+  'action' => '6',
+)
+Request URL: /documents/6
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(DocumentsController), Object(CakeRequest))
+#2 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-11 10:25:43 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: This is usually a temporary error during hostname resolution and means that the local server did not receive a response from an authoritative server. ',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\GitHub\school_management\cms\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\GitHub\school_management\cms\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 D:\GitHub\school_management\cms\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 D:\GitHub\school_management\cms\lib\Cake\Model\Model.php(3551): Model->setSource('students')
+#5 D:\GitHub\school_management\cms\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#6 D:\GitHub\school_management\cms\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#7 D:\GitHub\school_management\cms\app\Controller\StudentsController.php(8): Model->find('all')
+#8 [internal function]: StudentsController->index()
+#9 D:\GitHub\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentsController), Array)
+#10 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest))
+#12 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}

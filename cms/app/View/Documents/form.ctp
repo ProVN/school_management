@@ -17,7 +17,11 @@
 						  	<?php else :?>
 							<legend>Sửa thông tin tài liệu : <?php echo $this->data['Document']['name']?></legend>
 							<?php endif?>
+							<?php if(isset($student_id)):?>
 							<?php echo $this->Form->input('student_id', array('label'=>false, 'type'=>'hidden' ,'value' => $student_id))?>
+							<?php else:?>
+								<?php echo $this->Form->input('student_id', array('label'=>false, 'type'=>'hidden'))?>
+							<?php endif?>
 							<div class="control-group">
 							  <label class="control-label" for="typeahead">Loại tài liệu</label>
 							  <div class="controls">
@@ -44,7 +48,7 @@
 							</div>							
 							<div class="form-actions">
 							  <button type="submit" class="btn btn-primary">Lưu lại</button>
-							  <a href="/cms/documents/" class="btn">Hủy</a>
+							  <a href="/documents/" class="btn">Hủy</a>
 							</div>
 						  </fieldset>
 						<?php echo $this->Form->end()?>

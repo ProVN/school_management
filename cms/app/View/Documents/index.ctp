@@ -1,5 +1,5 @@
 		<script type="text/javascript">
-			function delete(id,element)
+			function delete_confirm(id,element)
 			{
 				var cfm = window.confirm('Bạn có chắc chắn muốn xóa tài liệu này?');
 				if(cfm == true) {
@@ -10,7 +10,7 @@
 						url:"<?php echo $this->Html->url(array('controller'=>'documents','action'=>'delete'))?>/"+id,
 						dataType:"html",
 						beforeSend:function() {
-							column.html(get_mini_loading_image_html());
+							column.html('Deleting...');
 						},
 						success:function (data) {
 							row.fadeOut(500);
@@ -36,7 +36,7 @@
 					</div>
 					<div class="box-content">
 						<div class="toolbar">
-							<a href="/cms/documents/add/<?php echo $student_id?>" class="btn btn-primary">
+							<a href="/documents/add/<?php echo $student_id?>" class="btn btn-primary">
 								<i class="icon-white icon-plus"></i>
 								Thêm tài liệu mới
 							</a>
@@ -57,17 +57,20 @@
 							<tr>
 								<td><?php echo $key+1?></td>
 								<td class="center"><?php echo $item['Document']['name']?></td>
-								<td class="center"><?php echo $item['Document']['url']?></td>
+								<td class="center">
+									<a href='<?php echo Configure::read('FRONT_END_WEBSITE_URL')?>upload/documents/<?php echo $item['Document']['url']?>' target="_blank">
+									<?php echo $item['Document']['url']?></a>
+								</td>
 								<td class="center"><?php echo $item['Document']['description']?></td>
 								<td class="center"><?php echo $item['DocumentType']['name']?></td>
 								<td class="center" style="width:150px">
-									<a class="btn btn-info" href="/cms/documents/edit/<?php echo $item['Document']['id']?>/">
+									<a class="btn btn-info" href="/documents/edit/<?php echo $item['Document']['id']?>/">
 										<i class="icon-edit icon-white"></i>  
 										Sửa                            	                
 									</a>
-									<a class="btn btn-danger" href="javascript:void(0);" onclick="delete('<?php echo $item['Document']['id']?>',$(this))">
+									<a class="btn btn-danger" href="javascript:void(0);" onclick="delete_confirm('<?php echo $item['Document']['id']?>',$(this))">
 										<i class="icon-trash icon-white"></i> 
-										Delete
+										Xóa
 									</a>
 								</td>
 							</tr>

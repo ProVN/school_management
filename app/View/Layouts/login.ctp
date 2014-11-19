@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -124,7 +125,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                                     <div class="row">
 
     <!-- Profile Image -->
-    <div class="col-lg-12 col-md-12 col-sm-3 col-xs-12 " style="padding-top:20px">
+    <div class="col-lg-12 col-md-12 col-sm-3 col-xs-12 " style="padding-top:20px;">
          <div class="image-holder one" id="pic_prof_1" style="display:none">
                 <img class="head-image up circle" src="/upload/img/<?php echo $student['Student']['image_small']?>" width="150" height="150" alt="" />
                 <!--
@@ -140,19 +141,20 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                 
         </div>        
         <!-- style for simple image profile -->
-        <!--
+        
         <a href="http://glion.edu/" target="_blank"><img src="/img/LHE/1.png" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
         <a href="http://www.lesroches.edu/" target="_blank"><img src="/img/LHE/2.png" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
         <a href="http://www.bluemountains.edu.au/" target="_blank"><img src="/img/LHE/3.png" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
         <a href="http://www.kendall.edu/" target="_blank"><img src="/img/LHE/4.png" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
-        -->
-        <a href="http://www.ihtti.com/en/" target="_blank"><img src="/img/SEG/1.png" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
-        <a href="http://www.hotelinstitutemontreux.com/en/" target="_blank"><img src="/img/SEG/2.jpg" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
-        <a href="http://www.ritz.edu/en/" target="_blank"><img src="/img/SEG/3.png" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
-        <a href="http://www.culinaryartsswitzerland.com/en/" target="_blank"><img src="/img/SEG/4.png" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
-        <a href="http://www.shms.com/en/" target="_blank"><img src="/img/SEG/5.png" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
         
-		
+        <!--
+        <a href="http://www.ihtti.com/en/" target="_blank"><img src="/img/SEG/1.png" style="width: 49%; margin-top: 45px; margin-bottom: 15px"/></a>
+        <a href="http://www.hotelinstitutemontreux.com/en/" target="_blank"><img src="/img/SEG/2.jpg" style="width: 49%; margin-top: 45px; margin-bottom: 15px"/></a>
+        <a href="http://www.ritz.edu/en/" target="_blank"><img src="/img/SEG/3.png" style="width: 49%; margin-top: 15px; margin-bottom: 15px"/></a>
+        <a href="http://www.culinaryartsswitzerland.com/en/" target="_blank"><img src="/img/SEG/4.png" style="width: 49%; margin-top: 15px; margin-bottom: 15px"/></a>
+        <a href="http://www.shms.com/en/" target="_blank"><img src="/img/SEG/5.png" style="width: 49%; margin-top: 15px; margin-bottom: 15px"/></a>
+        -->
+		<div style="clear: both"></div>
     </div>
     <!-- End Profile Image -->
        
@@ -168,13 +170,13 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                                                 <span class="tite-list">Đăng nhập</span>
                                                 <i class="fa fa-sign-in icon_menu icon_menu_active"></i>
                                             </li>
-
-                                            <li class="tabs-resume hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a" data-tab-name="document_info"> 
+                                            <a href="http://google.com">
+                                            <li class="tabs-resume " data-tab-name="document_info" onclick="window.open('https://www.facebook.com/GConnect.Education')"> 
                                                 <span class="tite-list">tình trạng hồ sơ</span>
                                                 <i class="fa fa-facebook icon_menu"></i>
                                             </li>
-
-                                            <li class="tabs-portfolio hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a" data-tab-name="document_download"> 
+                                            </a>
+                                            <li class="tabs-portfolio hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a" data-tab-name="document_download" onclick="window.open('http://www.gconnect.edu.vn/')"> 
                                                 <span class="tite-list">tài liệu học tập</span>
                                                 <i class="fa fa-globe icon_menu"></i>
                                             </li>
@@ -194,6 +196,25 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php echo $this->fetch('content')?>
 	</div>
     <div class="clear"></div>
+                                            </div>
+                                            
+                                            <div id="profile" class="content_2" style="text-align: center;">
+    <div style="text-align: center; margin-top: 50px">                                            <!-- .title -->
+	<img src="/img/logo.jpg" style="max-width: 400px; width: 100%; margin-bottom: 30px">
+
+	<?php echo $this->fetch('content')?>
+	</div>
+    <div class="clear"></div>
+                                            </div>
+                                            
+                                             <div id="profile" class="content_2" style="text-align: center;">
+    <div style="text-align: center; margin-top: 50px">                                            <!-- .title -->
+	<img src="/img/logo.jpg" style="max-width: 400px; width: 100%; margin-bottom: 30px">
+
+	<?php echo $this->fetch('content')?>
+	</div>
+    <div class="clear"></div>
+                                            </div>
                                             </div>
                                             <!-- End .profile -->
 
@@ -223,136 +244,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         </div>
         <!-- End wrapper -->
 
-        <!-- Switcher -->
-        <!--
-        <div id="custumize-style">
-            <h2>Style Selector<a href="#" class="switcher"><i class="fa fa-cogs icon-switcher"></i></a></h2>
-            <div>
-                <h3>Theme Color</h3>
-                <ul class="colors-style" id="color1">
-
-                    <li><a href="#" class="gray"></a></li>
-                    <li><a href="#" class="green"></a></li>
-                    <li><a href="#" class="blue"></a></li>
-                    <li><a href="#" class="red"></a></li>
-                    <li><a href="#" class="yellow"></a></li>
-
-                    <li><a href="#" class="DarkBlue"></a></li>
-                    <li><a href="#" class="orange"></a></li>
-                    <li><a href="#" class="rose"></a></li>
-                    <li><a href="#" class="lightseagreen"></a></li>
-                    <li><a href="#" class="darkolivegreen"></a></li>
-
-                </ul>
-            </div>
-            <div> 
-
-                <h3 class="layouts">Profile Image</h3>
-                <div id="show">
-
-                    <div class="clean-check">
-
-                        <input type="radio" id="r1" name="style_profile" value="style_profile_1" checked="checked" />
-                        <label for="r1"><span></span>Rotating image</label>
-
-                        <input type="radio" id="r2" name="style_profile" value="style_profile_2" />
-                        <label for="r2"><span></span>Fixed image</label>
-
-                    </div>
-                </div>
-
-
-                
-                <h3 class="layouts">Page Builder</h3>
-                <div id="show">
-                    <div class="clean-check" style="padding-left: 30px;">
-
-                        <input type="radio" id="pb1" name="page_builder" value="http://demo.flexy-codes.com/FlexyVcard"  checked />
-                        <label for="pb1"><span></span>Style 1</label>
-
-                        <input type="radio" id="pb2" name="page_builder" value="page-builder-2.html"  />
-                        <label for="pb2"><span></span>Style 2</label>
-
-                        <input type="radio" id="pb3" name="page_builder" value="page-builder-3.html"  />
-                        <label for="pb3"><span></span>Style 3</label>
-
-                        <input type="radio" id="pb4" name="page_builder" value="page-builder-4.html"  />
-                        <label for="pb4"><span></span>Style 4</label>
-                    </div>
-                </div>      
-
-                <h3 class="layouts">Page Animation</h3>
-                <div id="show">
-
-                    <select name="one" class="dropdown-select">
-                        <optgroup label="Bouncing Entrances">
-                            <option value="bounceIn" selected>bounceIn</option>
-                            <option value="bounceInDown">bounceInDown</option>
-                            <option value="bounceInLeft">bounceInLeft</option>
-                            <option value="bounceInRight">bounceInRight</option>
-                            <option value="bounceInUp">bounceInUp</option>
-                        </optgroup>
-
-                        <optgroup label="Fading Entrances">
-                            <option value="fadeIn">fadeIn</option>
-                            <option value="fadeInDown">fadeInDown</option>
-                            <option value="fadeInLeft">fadeInLeft</option>
-                            <option value="fadeInRight">fadeInRight</option>
-                            <option value="fadeInUp">fadeInUp</option>
-                        </optgroup>      
-                    </select>
-
-                </div>
-
-                <h3 class="layouts" style="padding-top:5px">Background Style</h3>
-                <div id="show">
-
-                    <div class="clean-check">
-
-						<input type="radio" id="s1" name="layout" value="bg_color" checked="checked" />
-                        <label for="s1"><span></span>Color</label>
-                        
-                        <input type="radio" id="s2" name="layout" value="bg_slider" />
-                        <label for="s2"><span></span>Slider</label>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div> 
-                <h3>Background Color</h3>
-                <ul class="colors-style bgsolid" id="bgsolid">
-                    <li><a href="#" class="gray-bg"></a></li>
-                    <li><a href="#" class="green-bg"></a></li>
-                    <li><a href="#" class="blue-bg"></a></li>
-                    <li><a href="#" class="red-bg"></a></li>
-                    <li><a href="#" class="yellow-bg"></a></li>
-                </ul>
-            </div> 
-
-            <div>  
-                <h3>Background Image</h3>
-                <ul class="colors-style bg" id="bg">
-                    <li><a href="#" class="bg1"></a></li>
-                    <li><a href="#" class="bg2"></a></li>
-                    <li><a href="#" class="bg3"></a></li>
-                    <li><a href="#" class="bg4"></a></li>
-                    <li><a href="#" class="bg5"></a></li>
-                </ul>
-            </div>
-
-            <div id="button-reset"><a href="#" class="button color blue boxed">Reset</a></div>
-        </div>
-        -->
-        <!-- End Switcher -->
-
-
-
+ 
         <!-- jquery | jQuery 1.11.0 -->
         <!-- Credits: http://jquery.com -->
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
  		
         <!-- Js | bootstrap -->
         <!-- Credits: http://getbootstrap.com/ -->
@@ -377,7 +272,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
         <!-- Js | switcher -->
         <!-- Credits: http://themeforest.net/user/FlexyCodes -->
-        <script type="text/javascript" src="/js/jsSwitcher/switcher.js"></script>	
+        <!--<script type="text/javascript" src="/js/jsSwitcher/switcher.js"></script>-->	
 
         <!-- Js | mCustomScrollbar -->
         <!-- Credits: http://manos.malihu.gr/jquery-custom-content-scroller -->
@@ -398,6 +293,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         
         <!-- code js for image rotate -->
         <script type="text/javascript">
+                	
 			var mouseX;
 			var mouseY;
 			var imageOne;
@@ -439,6 +335,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				imageOne.setImageDirection();
 
 			}
+			
 
         </script>
 

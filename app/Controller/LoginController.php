@@ -31,9 +31,13 @@ App::uses('AppController', 'Controller');
 class LoginController extends AppController {
 	
 	function beforeFilter() {
-    parent::beforeFilter();
-        $this->layout = 'login';
-  }
+    	parent::beforeFilter();
+		
+		if(isset($_GET['type']) && $_GET['type'] == 2)
+			$this->layout = 'login2';
+		else
+        	$this->layout = 'login';
+  	}
 	public function index(){
 		if(!empty($_POST)) {
 			$student_code = $_POST['student_code'];

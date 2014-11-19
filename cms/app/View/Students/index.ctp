@@ -1,15 +1,17 @@
 		<script type="text/javascript">
-			function delete(id,element)
+			function delete_confirm(id,element)
 			{
 				var cfm = window.confirm('Bạn có chắc chắn muốn xóa học viên này?');
+				
 				if(cfm == true) {
+					
 					var column = element.parent();
 					var row = element.parents('tr');
 					var old_html = column.html();
 					$.ajax({
 						url:"<?php echo $this->Html->url(array('controller'=>'students','action'=>'delete'))?>/"+id,
 						dataType:"html",
-						beforeSend:function() {							column.html(get_mini_loading_image_html());
+						beforeSend:function() {							column.html('Deleting...');
 						},
 						success:function (data) {
 							row.fadeOut(500);
@@ -20,6 +22,11 @@
 						}
 					});
 				}
+			}
+			function showSearch(){
+				var country = $('#country').val();
+				var school = $('#school').val();
+				window.location = '/students/index/'+country+"/"+school+"/";								
 			}
 		</script>
 		
@@ -35,12 +42,33 @@
 					</div>
 					<div class="box-content">
 						<div class="toolbar">
-							<a href="/cms/students/add/" class="btn btn-primary">
+							<a href="/students/add/" class="btn btn-primary">
 								<i class="icon-white icon-plus"></i>
 								Thêm học viên mới
 							</a>
+							<div style="float:right; margin-left:10px">
+								<button class="btn btn-primary" onclick="showSearch()">Tìm kiếm</button>
+							</div>
+								<div style="float:right">
+								Quốc gia:
+								<select id="country">
+									<option value="0">Tất cả</option>
+									<?php foreach ($cities as $key => $value):?>
+									<option value="<?php echo $key?>" <?php if($key==$country) echo 'selected="selected"'?>><?php echo $value?></option>	
+									<?php endforeach?>
+								</select>
+								</div>
+								<div style="float:right; margin-right: 30px">
+								Trường:
+								<select id="school">
+									<option value="0">Tất cả</option>
+									<?php foreach ($schools as $key => $value):?>
+									<option value="<?php echo $key?>" <?php if($key==$school) echo 'selected="selected"'?>><?php echo $value?></option>	
+									<?php endforeach?>
+								</select>
+								</div>							
 						</div>
-						<?php echo $this->Element('index_status', array('item_name'=>'category'))?>
+						<?php echo $this->Element('index_status', array('item_name'=>'Student'))?>
 						<table class="table table-striped table-bordered bootstrap-datatable datatable">
 						  <thead>
 							  <tr>
@@ -49,6 +77,7 @@
 								  <th>Ngày sinh</th>
 								  <th>Trường</th>
 								  <th>Quốc gia</th>
+								  <th>Ngày tạo</th>
 								  <th></th>
 							  </tr>
 						  </thead>   
@@ -60,16 +89,17 @@
 								<td class="center"><?php echo $item['Student']['birthday']?></td>
 								<td class="center"><?php echo $item['School']['name']?></td>
 								<td class="center"><?php echo $item['Country']['name']?></td>
-								<td class="center" style="width:150px">
-									<a class="btn btn-info" href="/cms/students/edit/<?php echo $item['Student']['id']?>/">
+								<td class="center"><?php echo $item['Student']['create_date']?></td>
+								<td class="center" style="width:255px">
+									<a class="btn btn-info" href="/students/edit/<?php echo $item['Student']['id']?>/">
 										<i class="icon-edit icon-white"></i>  
 										Sửa                            	                
 									</a>
-									<a class="btn btn-danger" href="javascript:void(0);" onclick="delete('<?php echo $item['Student']['id']?>',$(this))">
+									<a class="btn btn-danger" href="javascript:void(0);" onclick="delete_confirm(<?php echo $item['Student']['id']?>,$(this))">
 										<i class="icon-trash icon-white"></i> 
-										Delete
+										Xóa
 									</a>
-									<a class="btn btn-info" href="/cms/documents/index/<?php echo $item['Student']['id']?>/">
+									<a class="btn btn-primary" href="/documents/index/<?php echo $item['Student']['id']?>/">
 										<i class="icon-edit icon-white"></i>  
 										Xem tài liệu                            	                
 									</a>

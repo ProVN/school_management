@@ -17,8 +17,14 @@ class DocumentsController extends AppController {
 			if ($this->request->is('post')) {
 				$data = $this->data;
 				$file = $data['Document']['file_url'];
-		     	move_uploaded_file($data['Document']['file_url']['tmp_name'], WWW_ROOT . 'upload/' . $data['Document']['file_url']['name']);
-				$data['Document']['url'] = $data['Document']['file_url']['name'];
+		     	if($file['error'] == 0) {
+					$file_ext = pathinfo($file['name'], PATHINFO_EXTENSION);
+					$file_name = $this->randomString().'.'.$file_ext;
+					if($this->uploadfile($file['tmp_name'],'upload/documents/'.$file_name)){
+						$data['Document']['url'] = $file_name;
+					}					
+				}
+				
 	            if ($this->Document->save($data)) {
 	            	$this->setAfterSave(true);
 					$this -> redirect_to_main_page($student_id);
@@ -36,17 +42,22 @@ class DocumentsController extends AppController {
 			$this -> redirect_to_main_page();
 		} else {
 			if (empty($this -> data)) {
-				$this -> set('student_id',$id);
 				$this -> data = $document;
 				$this -> render('form');
 			} else {
 				$data = $this->data;
 				$file = $data['Document']['file_url'];
-		     	move_uploaded_file($data['Document']['file_url']['tmp_name'], WWW_ROOT . 'upload/' . $data['Document']['file_url']['name']);
-				$data['Document']['url'] = $data['Document']['file_url']['name'];
+				
+				if($file['error'] == 0) {
+					$file_ext = pathinfo($file['name'], PATHINFO_EXTENSION);
+					$file_name = $this->randomString().'.'.$file_ext;
+					if($this->uploadfile($file['tmp_name'],'upload/documents/'.$file_name)){
+						$student['Document']['url'] = $file_name;
+					}					
+				}
 				$this -> Document -> save($data);
 				$this->setAfterSave(true);
-				$this -> redirect_to_main_page($id);
+				$this -> redirect_to_main_page($document['Document']['student_id']);
 			}
 		}
 	}
@@ -62,7 +73,7 @@ class DocumentsController extends AppController {
 	
 	private function prepareData()
 	{
-		$doc_type_list = $this -> Document -> DocumentType -> find('list'); 
+		$doc_type_list = array('0'=>'Tài liệu thông tin sinh viên', '1'=>'Tài liệu học tập');		
 		$this->set('doc_type_list',$doc_type_list);
 	}
 
