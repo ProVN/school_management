@@ -31,7 +31,7 @@
  * In production mode, flash messages redirect after a time interval.
  * In development mode, you need to click the flash message to continue.
  */
-	Configure::write('debug', 0);
+	Configure::write('debug', 2);
 
 /**
  * Configure the Error handler used to handle errors for your application. By default
@@ -385,8 +385,8 @@ Cache::config('_cake_model_', array(
 	'duration' => $duration
 ));
 
-Configure::write('FRONT_END_WEBSITE_URL','http://krea.vn/');
-Configure::write('FRONT_END_FTP_URL','ftp.krea.vn');
-Configure::write('FRONT_END_FTP_UID','ifu5448c');
-Configure::write('FRONT_END_FTP_PWD','qKp4STN2!@A');
-Configure::write('FRONT_END_FTP_ROOT','/public_html/');
+Configure::write('FRONT_END_WEBSITE_URL','http://sm.gconnect.edu.vn/');
+Configure::write('FRONT_END_FTP_URL','gconnect.edu.vn');
+Configure::write('FRONT_END_FTP_UID','gconnect');
+Configure::write('FRONT_END_FTP_PWD','123456');
+Configure::write('FRONT_END_FTP_ROOT','/public_html/sm/');

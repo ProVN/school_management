@@ -141,11 +141,18 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                 
         </div>        
         <!-- style for simple image profile -->
-        
-        <a href="http://glion.edu/" target="_blank"><img src="/img/LHE/1.png" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
-        <a href="http://www.lesroches.edu/" target="_blank"><img src="/img/LHE/2.png" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
-        <a href="http://www.bluemountains.edu.au/" target="_blank"><img src="/img/LHE/3.png" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
-        <a href="http://www.kendall.edu/" target="_blank"><img src="/img/LHE/4.png" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
+        <div style="padding-left:30px; padding-right:30px; padding-bottom:10px">
+        	<a href="http://glion.edu/" target="_blank"><img src="/img/LHE/1.png" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
+        </div>
+        <div style="padding-left:30px; padding-right:30px; padding-bottom:10px">
+        	<a href="http://www.lesroches.edu/" target="_blank"><img src="/img/LHE/2.png" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
+        </div>
+        <div style="padding-left:30px; padding-right:30px; padding-bottom:10px">
+        	<a href="http://www.bluemountains.edu.au/" target="_blank"><img src="/img/LHE/3.png" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
+        </div>
+        <div style="padding-left:30px; padding-right:30px; padding-bottom:10px">
+        	<a href="http://www.kendall.edu/" target="_blank"><img src="/img/LHE/4.png" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
+        </div>
         
         <!--
         <a href="http://www.ihtti.com/en/" target="_blank"><img src="/img/SEG/1.png" style="width: 49%; margin-top: 45px; margin-bottom: 15px"/></a>
@@ -191,7 +198,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                                             <!-- profile -->
                                             <div id="profile" class="content_2" style="text-align: center;">
     <div style="text-align: center; margin-top: 50px">                                            <!-- .title -->
-	<img src="/img/logo.jpg" style="max-width: 400px; width: 100%; margin-bottom: 30px">
+	<img src="/img/logo.jpg" style="max-width: 300px; width: 100%; margin-bottom: 30px">
 
 	<?php echo $this->fetch('content')?>
 	</div>
@@ -200,7 +207,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                                             
                                             <div id="profile" class="content_2" style="text-align: center;">
     <div style="text-align: center; margin-top: 50px">                                            <!-- .title -->
-	<img src="/img/logo.jpg" style="max-width: 400px; width: 100%; margin-bottom: 30px">
+	<img src="/img/logo.jpg" style="max-width: 300px; width: 100%; margin-bottom: 30px">
 
 	<?php echo $this->fetch('content')?>
 	</div>
@@ -209,7 +216,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                                             
                                              <div id="profile" class="content_2" style="text-align: center;">
     <div style="text-align: center; margin-top: 50px">                                            <!-- .title -->
-	<img src="/img/logo.jpg" style="max-width: 400px; width: 100%; margin-bottom: 30px">
+	<img src="/img/logo.jpg" style="max-width: 300px; width: 100%; margin-bottom: 30px">
 
 	<?php echo $this->fetch('content')?>
 	</div>

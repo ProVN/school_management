@@ -58,7 +58,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
         <!-- CSS | prettyPhoto -->
         <!-- Credits: http://www.no-margin-for-errors.com/ -->
-        <link rel="stylesheet" type="text/css" href="/css/prettyPhoto.css"/> 
+        <link rel="stylesheet" type="text/css" href="/css/prettyPhoto.css"/>
+        
+         
 
 		<!-- CSS | Google Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
@@ -84,7 +86,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			}
 
         </style>
-
+		<link href="/js/jquery-ui.css" rel="stylesheet">
+		<link rel="stylesheet" href="/css/reset.css"> <!-- CSS reset -->
+		<link rel="stylesheet" href="/css/style.css"> <!-- Resource style -->
+		<script src="/js/modernizr.js"></script> <!-- Modernizr -->
     </head>
 
     <body>
@@ -182,33 +187,38 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                                     <div id="verticalTab">
 
                                         <ul class="resp-tabs-list">
-                                            <li class="tabs-profile hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a profile" data-tab-name="profile">			
+                                            <li class="tabs-profile hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a profile" data-tab-name="profile" title="Thông tin học viên">			
                                                 <span class="tite-list">thông tin học viên</span>
                                                 <i class="fa fa-user icon_menu icon_menu_active"></i>
                                             </li>
 
-                                            <li class="tabs-resume hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a" data-tab-name="document_info"> 
+                                            <li class="tabs-resume hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a" data-tab-name="document_info" title="Tình trạng hồ sơ"> 
                                                 <span class="tite-list">tình trạng hồ sơ</span>
                                                 <i class="fa fa-tasks icon_menu"></i>
                                             </li>
 
-                                            <li class="tabs-portfolio hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a" data-tab-name="document_download"> 
+                                            <li class="tabs-portfolio hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a" data-tab-name="document_download" title="Tài liệu học tập"> 
                                                 <span class="tite-list">tài liệu học tập</span>
                                                 <i class="fa fa-download icon_menu"></i>
                                             </li>
-
-                                            <li class="tabs-contact hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a" data-tab-name="contact"> 
+											
+											<li class="tabs-portfolio hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a" data-tab-name="document_download" title="Thời khóa biểu"> 
+                                                <span class="tite-list">thời khóa biểu</span>
+                                                <i class="fa fa-calendar icon_menu"></i>
+                                            </li>
+											
+                                            <li class="tabs-contact hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a" data-tab-name="contact" title="Liên hệ"> 
                                                 <span class="tite-list">liên hệ</span>
                                                 <i class="fa fa-envelope icon_menu"></i> 
                                             </li>
                                             
-                                            <li class="tabs-contact hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a" data-tab-name="logout"> 
+                                            <li class="tabs-contact hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a" data-tab-name="logout" title="Thoát"> 
                                                 <span class="tite-list">thoát</span>
                                                 <i class="fa fa-sign-out icon_menu"></i> 
                                             </li>
                                             
                                             
-                                            <a href="#" id="print" style="margin-top:124px"><i class="fa fa-print icon_print"></i> </a>
+                                            <a href="#" id="print" style="margin-top:48px"><i class="fa fa-print icon_print"></i> </a>
                                             
                                         </ul>
                                         <!-- /resp-tabs-list -->
@@ -235,7 +245,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		   <ul class="about">
             <li>
                 <i class="glyphicon glyphicon-user"></i>
-                <label>Họ và tên</label>
+                <label style="width:60px">Họ và tên</label>
                 <span class="value"><?php echo $student['Student']['name']?></span>
                 <div class="clear"></div>
             </li>
@@ -293,10 +303,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
             </li>    
             <?php endforeach?>
         </ul>
-
-
         <p style="margin-bottom:20px">
-            <i class="fa fa-quote-left"></i>       
+                 
             <?php echo $student['Student']['description']?>
         </p>
     </div>
@@ -304,9 +312,11 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
     <div class="col-md-6 profile-r">
         <div class="cycle-slideshow">
+        	<!--
         	<?php if($student['Student']['image_large'] != ""):?>
             <img src="/upload/img/students/<?php echo $student['Student']['image_large']?>" alt="<?php echo $student['Student']['name']?>" />
             <?php endif?>
+           -->
         </div>
     </div>
 
@@ -350,7 +360,11 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         				<td><?php echo $item['name']?></td>
         				<td><?php echo ($item['url']==null || $item['url']=='')?'Chưa nộp':'Đã nộp'?></td>
         				<td>
-        					<a href="<?php echo $link_download?>">Tải về</a>
+        					<?php if($link_download == "#"):?>
+        					<span style="color:gray">Tải về</span>
+        					<?php else:?>
+        						<a href="<?php echo $link_download?>">Tải về</a>
+        					<?php endif?>
         				</td>
         			</tr>
         			<?php endforeach?>
@@ -404,11 +418,18 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         			foreach ($student['Document'] as $key => $item):
 						if($item['doc_type']!='1') continue;
         				$index++;
+						$link_download = ($item['url']==null || $item['url']=='')?"#":'/upload/documents/'.$item['url'];
         				?>						
         			<tr>
         				<td><?php echo $index?></td>
         				<td><?php echo $item['name']?></td>
-        				<td><a href="">Tải về</a></td>
+        				<td>
+        					<?php if($link_download == "#"):?>
+        					<span style="color:gray">Tải về</span>
+        					<?php else:?>
+        						<a href="<?php echo $link_download?>">Tải về</a>
+        					<?php endif?>
+        				</td>
         			</tr>
         			<?php endforeach?>
         		</tbody>
@@ -416,7 +437,54 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         	
         </div>
                                                                                        </div>
+                                                                                       
                                             <!-- End .portfolio -->
+                                            
+                                            
+                                            
+                                             <div id="calendar_download" class="content_2">
+                                                
+                                                <!-- .title -->
+                                                <h1 class="h-bloc">Thời khóa biểu</h1>
+
+                                                <div class="document_list">
+
+<!-- START OF THOI KHOA BIEU -->
+
+<div class="cd-tabs">
+	
+	<nav>
+		<ul class="cd-tabs-navigation" style="height:30px">
+			<?php foreach($calendars as $key => $item) :?>
+			<li style="height:30px"><a data-content="content_<?php echo $item['StudentCalendarYear']['id']?>" <?php if($key==0) {?> class="selected"  <?php }?>href="#0" style="font-size: 10pt"><?php echo $item['StudentCalendarYear']['name']?></a></li>
+			<?php endforeach?>
+		</ul> <!-- cd-tabs-navigation -->
+	</nav>
+
+	<ul class="cd-tabs-content">
+		<?php foreach($calendars as $key => $item) :?>		
+		<li data-content="content_<?php echo $item['StudentCalendarYear']['id']?>" <?php if($key==0) {?> class="selected"  <?php }?>>
+			<div class="accordion">
+				<?php foreach($item['StudentCalendarSem'] as $key1 => $item1):?>				
+				<h3><?php echo $item1['name']?></h3>
+				<div>
+					<?php echo $item1['content']?>					
+				</div>						
+				<?php endforeach?>
+			</div>
+		</li>			
+		<?php endforeach?>
+	</ul> <!-- cd-tabs-content -->
+</div> <!-- cd-tabs -->
+
+<!-- END OF THOI KHOA BIEU -->
+	
+	
+	
+
+
+        </div>
+                                                                                       </div>
 
 <div id="contact" class="content_2">
                                                 
@@ -499,8 +567,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                                                                     <label for="message">Nội dung phản hồi</label>
                                                                     <textarea name="data[FeedBack][comment]" cols="88" rows="6" class="form-control message-contact" id="inputError" placeholder="Xin mời bạn viết nội dung tại đây..."></textarea>
                                                                 </p>
+                                                                <!--
                                                                 <input type="reset" name="reset" value="XÓA" class="reset">
-                                                                <input type="submit" name="submit" value="GỬI PHẢN HỒI" class="submit">
+                                                                -->
+                                                                <input type="submit" name="submit" value="GỬI PHẢN HỒI" class="submit" style="margin-left:0px">
                                                             <?php echo $this->Form->end()?>
                                                         </div>
                                                         <!-- /Contact Form -->
@@ -711,7 +781,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
  		<!-- Js | Js -->
         <!-- Credits: http://themeforest.net/user/FlexyCodes -->
         <script type="text/javascript" src="/js/main.js"></script>
-        
+        <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+        <script src="/js/main_tab.js"></script> <!-- Resource jQuery -->
         <!-- code js for image rotate -->
         <script type="text/javascript">
 			var mouseX;
@@ -755,12 +826,16 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				imageOne.setImageDirection();
 
 			}
+			
+			 $(function() {
+				$( ".accordion" ).accordion();
+			});
 
         </script>
 
 
         <!--[if lt IE 9]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+        <![endif]-->        
     </body>
 </html>

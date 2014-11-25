@@ -17,9 +17,8 @@
  * @since         CakePHP(tm) v 0.2.9
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-
 App::uses('AppController', 'Controller');
-
+App::uses('CakeEmail', 'Network/Email');
 /**
  * Static content controller
  *
@@ -36,6 +35,16 @@ class FeedBacksController extends AppController {
 		}
 		else {
 			$this->FeedBack->save($this->data);			
+			$email_port = $this->Config->find('first',array('conditions'=>array('name'=>'email_port')));
+			$email_host = $this->Config->find('first',array('conditions'=>array('name'=>'email_host')));
+			$email_username = $this->Config->find('first',array('conditions'=>array('name'=>'email_username')));	
+			$email_password = $this->Config->find('first',array('conditions'=>array('name'=>'email_password')));		
+			$email_received = $this->Config->find('first',array('conditions'=>array('name'=>'email_received')));			
+			$email = new CakeEmail('gmail');
+        	$email->to($email_received['Config']['value']);			
+        	$email->subject($this->data['Feedback']['title']);
+        	$email->from ('your_user@gmail.com');			
+			$email->send($this->data['Feedback']['comment']);
 			echo 'success';
 			exit();
 		}

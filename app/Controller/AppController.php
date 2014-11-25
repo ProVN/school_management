@@ -33,7 +33,7 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 	
 	public $components = array('Session','RequestHandler');
-	public $uses = array('Student','Country','Document','School','FeedBack','Contact');
+	public $uses = array('Student','Country','Document','School','FeedBack','Contact','StudentCalendarYear','StudentCalendarSem','Config');
 	
 	function beforeRender()
 	{
@@ -47,6 +47,17 @@ class AppController extends Controller {
 		$this->set('student',$student);
 		
 		$contact = $this->Contact->findById(1);
+		
+		//Thoi khoa bieu
+		$student_id = $student['Student']['id'];
+		$calendar = $this->StudentCalendarYear->find('all',array('conditions'=>array('student_id'=>$student_id)));
+		
 		$this->set('contact',$contact);
+		$this->set('calendars',$calendar);
 	} 
+	
+	function sendMail($content)
+	{
+		
+	}
 }

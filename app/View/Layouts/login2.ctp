@@ -147,11 +147,18 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         <a href="http://www.kendall.edu/" target="_blank"><img src="/img/LHE/4.png" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
         -->
         
-        <a href="http://www.ihtti.com/en/" target="_blank"><img src="/img/SEG/1.png" style="width: 49%; margin-top: 45px; margin-bottom: 15px"/></a>
-        <a href="http://www.hotelinstitutemontreux.com/en/" target="_blank"><img src="/img/SEG/2.jpg" style="width: 49%; margin-top: 45px; margin-bottom: 15px"/></a>
-        <a href="http://www.ritz.edu/en/" target="_blank"><img src="/img/SEG/3.png" style="width: 49%; margin-top: 15px; margin-bottom: 15px"/></a>
-        <a href="http://www.culinaryartsswitzerland.com/en/" target="_blank"><img src="/img/SEG/4.png" style="width: 49%; margin-top: 15px; margin-bottom: 15px"/></a>
-        <a href="http://www.shms.com/en/" target="_blank"><img src="/img/SEG/5.png" style="width: 49%; margin-top: 15px; margin-bottom: 15px"/></a>
+        <div style="padding-left:70px; padding-right:70px;">
+        	<a href="http://www.ihtti.com/en/" target="_blank"><img src="/img/SEG/1.png" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
+        </div>
+        <div style="padding-left:70px; padding-right:70px;">
+        	<a href="http://www.hotelinstitutemontreux.com/en/" target="_blank"><img src="/img/SEG/2.jpg" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
+        </div>
+        <div style="padding-left:70px; padding-right:70px;">
+        	<a href="http://www.ritz.edu/en/" target="_blank"><img src="/img/SEG/3.png" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
+        </div>
+		<div style="padding-left:70px; padding-right:70px;">        	
+        	<a href="http://www.shms.com/en/" target="_blank"><img src="/img/SEG/5.png" style="width: 100%; margin-top: 15px; margin-bottom: 15px"/></a>
+        </div>
 
 		<div style="clear: both"></div>
     </div>
@@ -190,7 +197,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                                             <!-- profile -->
                                             <div id="profile" class="content_2" style="text-align: center;">
     <div style="text-align: center; margin-top: 50px">                                            <!-- .title -->
-	<img src="/img/logo.jpg" style="max-width: 400px; width: 100%; margin-bottom: 30px">
+	<img src="/img/logo.jpg" style="max-width: 300px; width: 100%; margin-bottom: 30px">
 
 	<?php echo $this->fetch('content')?>
 	</div>
@@ -198,7 +205,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                                             </div>
                                              <div id="profile" class="content_2" style="text-align: center;">
     <div style="text-align: center; margin-top: 50px">                                            <!-- .title -->
-	<img src="/img/logo.jpg" style="max-width: 400px; width: 100%; margin-bottom: 30px">
+	<img src="/img/logo.jpg" style="max-width: 300px; width: 100%; margin-bottom: 30px">
 
 	<?php echo $this->fetch('content')?>
 	</div>
@@ -206,7 +213,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                                             </div>
                                              <div id="profile" class="content_2" style="text-align: center;">
     <div style="text-align: center; margin-top: 50px">                                            <!-- .title -->
-	<img src="/img/logo.jpg" style="max-width: 400px; width: 100%; margin-bottom: 30px">
+	<img src="/img/logo.jpg" style="max-width: 300px; width: 100%; margin-bottom: 30px">
 
 	<?php echo $this->fetch('content')?>
 	</div>

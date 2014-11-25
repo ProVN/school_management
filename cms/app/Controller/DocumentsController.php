@@ -18,8 +18,8 @@ class DocumentsController extends AppController {
 				$data = $this->data;
 				$file = $data['Document']['file_url'];
 		     	if($file['error'] == 0) {
-					$file_ext = pathinfo($file['name'], PATHINFO_EXTENSION);
-					$file_name = $this->randomString().'.'.$file_ext;
+					//$file_ext = pathinfo($file['name'], PATHINFO_EXTENSION);
+					$file_name = $file['name'];
 					if($this->uploadfile($file['tmp_name'],'upload/documents/'.$file_name)){
 						$data['Document']['url'] = $file_name;
 					}					
@@ -49,10 +49,10 @@ class DocumentsController extends AppController {
 				$file = $data['Document']['file_url'];
 				
 				if($file['error'] == 0) {
-					$file_ext = pathinfo($file['name'], PATHINFO_EXTENSION);
-					$file_name = $this->randomString().'.'.$file_ext;
+					//$file_ext = pathinfo($file['name'], PATHINFO_EXTENSION);
+					$file_name = $file['name'];
 					if($this->uploadfile($file['tmp_name'],'upload/documents/'.$file_name)){
-						$student['Document']['url'] = $file_name;
+						$data['Document']['url'] = $file_name;
 					}					
 				}
 				$this -> Document -> save($data);

@@ -31,8 +31,8 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-	 public $components = array('DebugKit.Toolbar','Session','RequestHandler');
-	 public $uses = array('Student','Country','Document','School','DocumentType','StudentInfo','Contact');
+	 public $components = array('Session','RequestHandler');
+	 public $uses = array('Student','Country','Document','School','DocumentType','StudentInfo','Contact','Config');
 	 
 	 function beforeRender()
 	 {
@@ -62,7 +62,8 @@ class AppController extends Controller {
 	 
 	 function uploadfile($source_file,$server_file_path)
 	 {
-		$remote_file = '/public_html/app/webroot/'.$server_file_path;		
+	 	$ftp_root = Configure::read('FRONT_END_FTP_ROOT');
+		$remote_file = $ftp_root.'app/webroot/'.$server_file_path;		
 		$ftp_server = Configure::read('FRONT_END_FTP_URL');
 		$ftp_user_name = Configure::read('FRONT_END_FTP_UID');
 		$ftp_user_pass = Configure::read('FRONT_END_FTP_PWD');

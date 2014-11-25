@@ -27,6 +27,8 @@
 	Router::connect('/feedback/*', array('controller' => 'feedbacks', 'action' => 'post'));
 	Router::connect('/logout/', array('controller' => 'login', 'action' => 'logout'));
 	Router::connect('/forgotpassword/', array('controller' => 'login', 'action' => 'forgotpassword'));
+	Router::connect('/customerlhe/', array('controller' => 'login', 'action' => 'index'));
+	Router::connect('/customerseg/', array('controller' => 'login', 'action' => 'index2'));
 	
 /**
  * ...and connect the rest of 'Pages' controller's URLs.

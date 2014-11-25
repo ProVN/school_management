@@ -6132,3 +6132,121 @@ Stack Trace:
 #11 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(StudentsController), Object(CakeRequest))
 #12 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2014-11-24 04:18:11 Error: [MissingViewException] View file "D:\GitHub\school_management\cms\app\View\Calendars\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\GitHub\\school_management\\cms\\app\\View\\Calendars\\index.ctp',
+)
+Request URL: /calendars/index/12/
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\GitHub\school_management\cms\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(CalendarsController), Object(CakeRequest))
+#4 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-24 04:18:27 Error: [MissingViewException] View file "D:\GitHub\school_management\cms\app\View\Calendars\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\GitHub\\school_management\\cms\\app\\View\\Calendars\\index.ctp',
+)
+Request URL: /calendars/index/12/
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\GitHub\school_management\cms\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(CalendarsController), Object(CakeRequest))
+#4 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-24 04:41:39 Error: Fatal Error (4): syntax error, unexpected ',', expecting ')' in [D:\GitHub\school_management\cms\app\View\Configs\index.ctp, line 18]
+2014-11-24 04:41:39 Error: [FatalErrorException] syntax error, unexpected ',', expecting ')'
+Request URL: /configs/
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\\GitHub\\schoo...', 18)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\\GitHub\\schoo...', 18, Array)
+#2 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\\GitHub\\schoo...', 18, Array)
+#3 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-24 04:44:27 Error: Fatal Error (1): Call to a member function save() on a non-object in [D:\GitHub\school_management\cms\app\Controller\ConfigsController.php, line 34]
+2014-11-24 04:44:27 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /configs/
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\GitHub\\schoo...', 34)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\GitHub\\schoo...', 34, Array)
+#2 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\GitHub\\schoo...', 34, Array)
+#3 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-24 04:44:42 Error: Fatal Error (1): Call to a member function save() on a non-object in [D:\GitHub\school_management\cms\app\Controller\ConfigsController.php, line 35]
+2014-11-24 04:44:42 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /configs/
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\GitHub\\schoo...', 35)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\GitHub\\schoo...', 35, Array)
+#2 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\GitHub\\schoo...', 35, Array)
+#3 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-24 04:44:58 Error: Fatal Error (1): Call to a member function save() on a non-object in [D:\GitHub\school_management\cms\app\Controller\ConfigsController.php, line 34]
+2014-11-24 04:44:58 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /configs/
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\GitHub\\schoo...', 34)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\GitHub\\schoo...', 34, Array)
+#2 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\GitHub\\schoo...', 34, Array)
+#3 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-25 09:53:27 Error: [MissingTableException] Table calendars for model Calendar was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'calendars',
+  'class' => 'Calendar',
+  'ds' => 'default',
+)
+Request URL: /calendars/index/12/
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Model\Model.php(3551): Model->setSource('calendars')
+#1 D:\GitHub\school_management\cms\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#2 D:\GitHub\school_management\cms\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#3 D:\GitHub\school_management\cms\app\Controller\CalendarsController.php(6): Model->find('first', Array)
+#4 [internal function]: CalendarsController->index('12')
+#5 D:\GitHub\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(CalendarsController), Array)
+#6 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(CalendarsController), Object(CakeRequest))
+#8 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-25 09:55:17 Error: [MissingControllerException] Controller class StudentCalendarYearsController could not be found.
+Exception Attributes: array (
+  'class' => 'StudentCalendarYearsController',
+  'plugin' => NULL,
+)
+Request URL: /StudentCalendarYears/index/12/
+Stack Trace:
+#0 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-25 09:55:50 Error: [MissingViewException] View file "D:\GitHub\school_management\cms\app\View\StudentCalendarYears\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\GitHub\\school_management\\cms\\app\\View\\StudentCalendarYears\\index.ctp',
+)
+Request URL: /StudentCalendarYears/index/12/
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\GitHub\school_management\cms\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(StudentCalendarYearsController), Object(CakeRequest))
+#4 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-25 10:02:49 Error: [MissingViewException] View file "D:\GitHub\school_management\cms\app\View\StudentCalendarYears\form.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\GitHub\\school_management\\cms\\app\\View\\StudentCalendarYears\\form.ctp',
+)
+Request URL: /StudentCalendarYears/edit/2/
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\View\View.php(468): View->_getViewFileName('form')
+#1 D:\GitHub\school_management\cms\lib\Cake\Controller\Controller.php(954): View->render('form', NULL)
+#2 D:\GitHub\school_management\cms\app\Controller\StudentCalendarYearsController.php(47): Controller->render('form')
+#3 [internal function]: StudentCalendarYearsController->edit('2')
+#4 D:\GitHub\school_management\cms\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(StudentCalendarYearsController), Array)
+#5 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#6 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(StudentCalendarYearsController), Object(CakeRequest))
+#7 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}

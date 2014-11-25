@@ -4,8 +4,10 @@ class Student extends AppModel {
         'Document' => array(
             'className' => 'Document'
         ),
-        'StudentInfo'
+        'StudentInfo',
+        
     );
+	
     public $belongsTo = array(
         'School' => array(
             'className' => 'School',

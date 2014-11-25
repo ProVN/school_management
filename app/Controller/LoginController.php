@@ -54,6 +54,26 @@ class LoginController extends AppController {
 		}
 	}
 	
+	
+	public function index2(){
+		$this->layout='login2';
+		if(!empty($_POST)) {
+			$student_code = $_POST['student_code'];
+			$password = $_POST['password'];
+			$student = $this->Student->find('first',array('conditions'=>array('code'=>$student_code, 'password'=>$password)));
+			
+			if(!empty($student)) {
+				$this->Session->write('STUDENT',$student);
+				$this->redirect("/");
+			} 
+			else {
+				$this->set('error','Mã số học viên hoặc mật khẩu không đúng.');
+			}
+		}
+		$this->render('index');
+	}
+	
+	
 	public function forgotpassword()
 	{
 		if(empty($_POST)) {

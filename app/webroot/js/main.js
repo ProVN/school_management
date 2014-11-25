@@ -169,9 +169,12 @@ jQuery(document).ready(function($) {
             data: $(this).serialize(),
             success: function(msg)
             {
+            	alert(msg);
                 var msg_error = msg.split(",");
                 var output_error = '';
-
+				$('#inputError').val('');
+				$('#inputSuccess').val('');
+				
                 if (msg_error.indexOf('error-message') != -1) {
                     $("#contact-message").addClass("has-error");
                     $("#contact-message").removeClass("has-success");

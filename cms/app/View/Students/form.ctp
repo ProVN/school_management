@@ -65,7 +65,7 @@
 							<div class="control-group">
 							  <label class="control-label" for="typeahead">Ngày sinh</label>
 							  <div class="controls">
-							  	<?php echo $this->Form->input('birthday', array('label'=>false, 'span5'))?>
+							  	<?php echo $this->Form->input('birthday', array('label'=>false, 'span5','minYear' => date('Y') - 100,))?>
 							  </div>
 							</div>		
 							

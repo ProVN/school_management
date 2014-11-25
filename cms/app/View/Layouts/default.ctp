@@ -144,6 +144,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 						<li><a class="ajax-link" href="/countries/"><i class="icon-list-alt"></i><span class="hidden-tablet"> Quốc gia</span></a></li>
 						<li><a class="ajax-link" href="/administrators/"><i class="icon-calendar"></i><span class="hidden-tablet"> Quản trị viên</span></a></li>
 						<li><a class="ajax-link" href="/contacts/"><i class="icon-calendar"></i><span class="hidden-tablet"> Liên hệ</span></a></li>
+						<li><a class="ajax-link" href="/configs/"><i class="icon-calendar"></i><span class="hidden-tablet"> Thiết lập mail</span></a></li>
 					</ul>
 					<!--<label id="for-is-ajax" class="hidden-tablet" for="is-ajax"><input id="is-ajax" type="checkbox"> Ajax on menu</label>-->
 				</div><!--/.well -->

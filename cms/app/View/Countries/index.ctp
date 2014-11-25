@@ -1,5 +1,5 @@
 		<script type="text/javascript">
-			function delete(id,element)
+			function delete_confirm(id,element)
 			{
 				var cfm = window.confirm('Bạn có chắc chắn muốn xóa quốc gia này?');
 				if(cfm == true) {
@@ -9,7 +9,7 @@
 					$.ajax({
 						url:"<?php echo $this->Html->url(array('controller'=>'countries','action'=>'delete'))?>/"+id,
 						dataType:"html",
-						beforeSend:function() {							column.html(get_mini_loading_image_html());
+						beforeSend:function() {							
 						},
 						success:function (data) {
 							row.fadeOut(500);
@@ -61,7 +61,7 @@
 										<i class="icon-edit icon-white"></i>  
 										Sửa                            	                
 									</a>
-									<a class="btn btn-danger" href="javascript:void(0);" onclick="delete('<?php echo $item['Country']['id']?>',$(this))">
+									<a class="btn btn-danger" href="javascript:void(0);" onclick="delete_confirm('<?php echo $item['Country']['id']?>',$(this))">
 										<i class="icon-trash icon-white"></i> 
 										Delete
 									</a>
