@@ -35,9 +35,15 @@
 							  	<?php echo $this->Form->input('logo_file', array('label'=>false, 'type'=>'file'))?>
 							  </div>
 							</div>
+							<div class="control-group">
+							  <label class="control-label" for="typeahead">Website</label>
+							  <div class="controls">
+							  	<?php echo $this->Form->input('homepage', array('label'=>false, 'class'=>'span7 typeahead'))?>
+							  </div>
+							</div>
 							<div class="form-actions">
 							  <button type="submit" class="btn btn-primary">Lưu lại</button>
-							  <a href="/students/" class="btn">Hủy</a>
+							  <a href="/schools/" class="btn">Hủy</a>
 							</div>
 						  </fieldset>
 						<?php echo $this->Form->end()?>

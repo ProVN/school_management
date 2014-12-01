@@ -174,7 +174,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
      <div id="profile_social" style="position: absolute; bottom: 0px">
              <div class="school_logo" style="background-color:white; padding:10px; padding-top:20px; padding-bottom:20px;">
              	
-    			<img src="/upload/img/schools/<?php echo $student['School']['logo']?>" style="width: 100%"/>
+    				<img src="/upload/img/schools/<?php echo $student['School']['logo']?>" style="width: 100%; cursor:pointer" border="0" onclick="window.open('<?php echo $student['School']['homepage']?>')"/>
+    			
     			
     		</div>
      </div>
@@ -198,7 +199,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                                             </li>
 
                                             <li class="tabs-portfolio hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a" data-tab-name="document_download" title="Tài liệu học tập"> 
-                                                <span class="tite-list">tài liệu học tập</span>
+                                                <span class="tite-list">tải xuống</span>
                                                 <i class="fa fa-download icon_menu"></i>
                                             </li>
 											
@@ -363,7 +364,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         					<?php if($link_download == "#"):?>
         					<span style="color:gray">Tải về</span>
         					<?php else:?>
-        						<a href="<?php echo $link_download?>">Tải về</a>
+        						<a href="<?php echo $link_download?>" target="_blank">Tải về</a>
         					<?php endif?>
         				</td>
         			</tr>
@@ -400,7 +401,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                                             <div id="document_download" class="content_2">
                                                 
                                                 <!-- .title -->
-                                                <h1 class="h-bloc">Tài liệu học tập</h1>
+                                                <h1 class="h-bloc">Tải xuống</h1>
 
                                                 <div class="document_list">
             
@@ -427,7 +428,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         					<?php if($link_download == "#"):?>
         					<span style="color:gray">Tải về</span>
         					<?php else:?>
-        						<a href="<?php echo $link_download?>">Tải về</a>
+        						<a href="<?php echo $link_download?>" target="_blank">Tải về</a>
         					<?php endif?>
         				</td>
         			</tr>
@@ -452,22 +453,21 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <!-- START OF THOI KHOA BIEU -->
 
 <div class="cd-tabs">
-	
 	<nav>
 		<ul class="cd-tabs-navigation" style="height:30px">
 			<?php foreach($calendars as $key => $item) :?>
-			<li style="height:30px"><a data-content="content_<?php echo $item['StudentCalendarYear']['id']?>" <?php if($key==0) {?> class="selected"  <?php }?>href="#0" style="font-size: 10pt"><?php echo $item['StudentCalendarYear']['name']?></a></li>
+			<li style="background-color:#FF4343; color:white"><a data-content="content_<?php echo $item['StudentCalendarYear']['id']?>" <?php if($key==0) {?> class="selected"  <?php }?>href="#0" style="font-size: 10pt"><?php echo $item['StudentCalendarYear']['name']?></a></li>
 			<?php endforeach?>
 		</ul> <!-- cd-tabs-navigation -->
 	</nav>
 
-	<ul class="cd-tabs-content">
+	<ul class="cd-tabs-content" style="height:420px">
 		<?php foreach($calendars as $key => $item) :?>		
 		<li data-content="content_<?php echo $item['StudentCalendarYear']['id']?>" <?php if($key==0) {?> class="selected"  <?php }?>>
 			<div class="accordion">
 				<?php foreach($item['StudentCalendarSem'] as $key1 => $item1):?>				
 				<h3><?php echo $item1['name']?></h3>
-				<div>
+				<div style="height:300px !important;">
 					<?php echo $item1['content']?>					
 				</div>						
 				<?php endforeach?>
@@ -494,7 +494,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                                         <div class="row">
 
                                             <div class="col-lg-12">
-                                                <div id="map"></div>
+                                                <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&msid=210470313728098197170.0004c68fdd76ab45d555f&ie=UTF8&t=m&ll=10.782342,106.687653&spn=0.007378,0.00912&z=16&output=embed"></iframe>
                                             </div>  
 
                                             <div class="col-lg-12">
@@ -560,17 +560,18 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                                                             	
                                                                 <p class="form-group" id="contact-name">
                                                                     <label for="name">Tiêu đề</label>
-                                                                    <input type="text" required="true" name="data[FeedBack][title]" class="form-control name-contact" id="inputSuccess" />
+                                                                    <input type="text" required="true" name="title" class="form-control name-contact" id="inputSuccess" />
                                                                 </p>
 
                                                                 <p class="form-group" id="contact-message">
                                                                     <label for="message">Nội dung phản hồi</label>
-                                                                    <textarea name="data[FeedBack][comment]" cols="88" rows="6" class="form-control message-contact" id="inputError" placeholder="Xin mời bạn viết nội dung tại đây..."></textarea>
+                                                                    <textarea name="comment" cols="88" rows="6" class="form-control message-contact" id="inputError" placeholder="Xin mời bạn viết nội dung tại đây..."></textarea>
                                                                 </p>
                                                                 <!--
                                                                 <input type="reset" name="reset" value="XÓA" class="reset">
                                                                 -->
-                                                                <input type="submit" name="submit" value="GỬI PHẢN HỒI" class="submit" style="margin-left:0px">
+                                                                <input type="submit" name="submit" value="GỬI PHẢN HỒI" class="submit" style="margin-left:0px;float:left">
+                                                                <div id="loading" style="float:left; margin-top: 10px; margin-left: 10px; display:none">Sending, Please wait....</div>
                                                             <?php echo $this->Form->end()?>
                                                         </div>
                                                         <!-- /Contact Form -->
@@ -828,7 +829,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			}
 			
 			 $(function() {
-				$( ".accordion" ).accordion();
+				$( ".accordion" ).accordion({
+					heightStyle:"content"
+				});
 			});
 
         </script>
@@ -836,6 +839,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
         <!--[if lt IE 9]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->        
+        <![endif]-->
+
     </body>
+    
 </html>

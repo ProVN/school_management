@@ -167,9 +167,12 @@ jQuery(document).ready(function($) {
             type: "POST",
             url: "/feed_backs/post/",
             data: $(this).serialize(),
+            beforeSend: function(){
+            	$('#loading').show();
+            },
             success: function(msg)
             {
-            	alert(msg);
+            	$('#loading').hide();
                 var msg_error = msg.split(",");
                 var output_error = '';
 				$('#inputError').val('');
@@ -204,13 +207,12 @@ jQuery(document).ready(function($) {
                 }
 
 
-                if (msg == 'success') {
+                if (msg.indexOf("success") > -1) {
 
                     response = '<div class="alert alert-success success-send">' +
                             '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' +
                             '<i class="glyphicon glyphicon-ok" style="margin-right: 5px;"></i> ' + $success
                             + '</div>';
-
 
                     $(".reset").trigger('click');
                     $("#contact-name").removeClass("has-success");

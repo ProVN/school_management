@@ -1,27 +1,34 @@
 <?php
 App::uses('AppController', 'Controller');
-class StudentCalendarYearsController extends AppController {
-	public function index($student_id) {			
+class SchoolsController extends AppController {
+	public function index() {
+			
 		//TASK_FOR_THAO: Em lấy data cho $datasource nhé 	
 		$datasource = array();
-		$datasource = $this -> StudentCalendarYear ->  find('all',array('conditions'=>array('student_id'=>$student_id)));
+		$datasource = $this -> School ->  find('all');
 		$this->set('datasource',$datasource);
-		$student = $this->Student->findById($student_id);
-		$this->set('student',$student);
 	}
 
-	public function add($student_id) {
-		$this->set('student_id',$student_id);
+	public function add() {
 		$this->prepareData();
 		if (empty($this -> data)) {
 			$this -> render('form');
 		} else {
 			if ($this->request->is('post')) {
 				$data = $this->data;
-
-	            if ($this->StudentCalendarYear->save($data)) {	
+				$file2 = $data['School']['logo_file'];
+				
+				if($file2['error'] == 0) {
+					$file_ext = pathinfo($file2['name'], PATHINFO_EXTENSION);
+					$file_name = $this->randomString().'.'.$file_ext;
+					if($this->uploadfile($file2['tmp_name'],'upload/img/schools/'.$file_name)){
+						$data['School']['logo'] = $file_name;
+					}						
+				}
+		     	
+	            if ($this->School->save($data)) {	
 	            	$this->setAfterSave(true);
-					$this -> redirect('/student_calendar_years/index/'.$student_id);
+					$this -> redirect_to_main_page();
 	            }
 				else
 	           	$this->Session->setFlash(__('Unable to add your school.'));
@@ -35,20 +42,29 @@ class StudentCalendarYearsController extends AppController {
 	        throw new NotFoundException(__('Invalid school'));
 	    }
 	
-	    $school = $this->StudentCalendarYear->findById($id);
+	    $school = $this->School->findById($id);
 	    if (!$school) {
 	        throw new NotFoundException(__('Invalid school'));
 	    }
-		
-		$this->set('student_id',$school['StudentCalendarYear']['student_id']);
 	
 	    if ($this->request->is(array('post', 'put'))) {
 			$data = $this->data;
-
-	        if ($this->StudentCalendarYear->save($data)) {
+	     	
+			$file2 = $data['School']['logo_file'];
+				
+				if($file2['error'] == 0) {
+					$file_ext = pathinfo($file2['name'], PATHINFO_EXTENSION);
+					$file_name = $this->randomString().'.'.$file_ext;
+					if($this->uploadfile($file2['tmp_name'],'upload/img/schools/'.$file_name)){
+						$data['School']['logo'] = $file_name;
+					}						
+				}
+			
+			$data['School']['logo'] = $file_name;
+	        if ($this->School->save($data)) {
 	        	$this->setAfterSave(true);
 				$this->Session->setFlash(__('Your post has been updated.'));
-	            $this -> redirect('/student_calendar_years/index/'.$school['StudentCalendarYear']['student_id']);
+	            $this -> redirect_to_main_page();
 	        }
 			else {
 				$this->Session->setFlash(__('Unable to update your post.'));
@@ -61,7 +77,7 @@ class StudentCalendarYearsController extends AppController {
 	}
 
 	public function delete($id) {
-		$this -> StudentCalendarYear -> delete($id);
+		$this -> School -> delete($id);
 		$this -> render(false);
 	}
 

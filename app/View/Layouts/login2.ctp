@@ -172,17 +172,17 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                                     <div id="verticalTab">
 
                                         <ul class="resp-tabs-list">
-                                            <li class="tabs-profile hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a profile" data-tab-name="profile">			
+                                            <li class="tabs-profile hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a profile" data-tab-name="profile" title="Đăng nhập">			
                                                 <span class="tite-list">Đăng nhập</span>
                                                 <i class="fa fa-sign-in icon_menu icon_menu_active"></i>
                                             </li>
                                             <a href="http://google.com">
-                                            <li class="tabs-resume " data-tab-name="document_info" onclick="window.open('https://www.facebook.com/GConnect.Education')"> 
+                                            <li class="tabs-resume " data-tab-name="document_info" onclick="window.open('https://www.facebook.com/GConnect.Education')" title="Facebook"> 
                                                 <span class="tite-list">tình trạng hồ sơ</span>
                                                 <i class="fa fa-facebook icon_menu"></i>
                                             </li>
                                             </a>
-                                            <li class="tabs-portfolio hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a" data-tab-name="document_download" onclick="window.open('http://www.gconnect.edu.vn/')"> 
+                                            <li class="tabs-portfolio hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a" data-tab-name="document_download" onclick="window.open('http://www.gconnect.edu.vn/')" title="Website trường"> 
                                                 <span class="tite-list">tài liệu học tập</span>
                                                 <i class="fa fa-globe icon_menu"></i>
                                             </li>

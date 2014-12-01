@@ -73,7 +73,7 @@ class DocumentsController extends AppController {
 	
 	private function prepareData()
 	{
-		$doc_type_list = array('0'=>'Tài liệu thông tin sinh viên', '1'=>'Tài liệu học tập');		
+		$doc_type_list = array('0'=>'Trạng thái hồ sơ', '1'=>'Tải xuống');		
 		$this->set('doc_type_list',$doc_type_list);
 	}
 

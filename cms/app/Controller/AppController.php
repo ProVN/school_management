@@ -32,7 +32,7 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 	 public $components = array('Session','RequestHandler');
-	 public $uses = array('Student','Country','Document','School','DocumentType','StudentInfo','Contact','Config');
+	 public $uses = array('Student','Country','Document','School','DocumentType','StudentInfo','Contact','Config','StudentCalendarYear','StudentCalendarSem');
 	 
 	 function beforeRender()
 	 {

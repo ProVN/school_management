@@ -1,17 +1,19 @@
 <?php
 App::uses('AppController', 'Controller');
-class StudentCalendarYearsController extends AppController {
-	public function index($student_id) {			
+class StudentCalendarSemsController extends AppController {
+	public function index($student_calendar_year_id) {			
 		//TASK_FOR_THAO: Em lấy data cho $datasource nhé 	
 		$datasource = array();
-		$datasource = $this -> StudentCalendarYear ->  find('all',array('conditions'=>array('student_id'=>$student_id)));
+		$datasource = $this -> StudentCalendarSem ->  find('all',array('conditions'=>array('student_calendar_year_id'=>$student_calendar_year_id)));
 		$this->set('datasource',$datasource);
-		$student = $this->Student->findById($student_id);
+		$year = $this->StudentCalendarYear->findById($student_calendar_year_id);
+		$this->set('year',$year);
+		$student = $this->Student->findById($year['StudentCalendarYear']['student_id']);
 		$this->set('student',$student);
 	}
 
-	public function add($student_id) {
-		$this->set('student_id',$student_id);
+	public function add($student_calendar_year_id) {
+		$this->set('student_calendar_year_id',$student_calendar_year_id);
 		$this->prepareData();
 		if (empty($this -> data)) {
 			$this -> render('form');
@@ -19,9 +21,9 @@ class StudentCalendarYearsController extends AppController {
 			if ($this->request->is('post')) {
 				$data = $this->data;
 
-	            if ($this->StudentCalendarYear->save($data)) {	
+	            if ($this->StudentCalendarSem->save($data)) {	
 	            	$this->setAfterSave(true);
-					$this -> redirect('/student_calendar_years/index/'.$student_id);
+					$this -> redirect('/student_calendar_sems/index/'.$student_calendar_year_id);
 	            }
 				else
 	           	$this->Session->setFlash(__('Unable to add your school.'));
@@ -35,20 +37,20 @@ class StudentCalendarYearsController extends AppController {
 	        throw new NotFoundException(__('Invalid school'));
 	    }
 	
-	    $school = $this->StudentCalendarYear->findById($id);
+	    $school = $this->StudentCalendarSem->findById($id);
 	    if (!$school) {
 	        throw new NotFoundException(__('Invalid school'));
 	    }
 		
-		$this->set('student_id',$school['StudentCalendarYear']['student_id']);
+		$this->set('student_calendar_year_id',$school['StudentCalendarSem']['student_calendar_year_id']);
 	
 	    if ($this->request->is(array('post', 'put'))) {
 			$data = $this->data;
 
-	        if ($this->StudentCalendarYear->save($data)) {
+	        if ($this->StudentCalendarSem->save($data)) {
 	        	$this->setAfterSave(true);
 				$this->Session->setFlash(__('Your post has been updated.'));
-	            $this -> redirect('/student_calendar_years/index/'.$school['StudentCalendarYear']['student_id']);
+	            $this -> redirect('/student_calendar_sems/index/'.$school['StudentCalendarSem']['student_calendar_year_id']);
 	        }
 			else {
 				$this->Session->setFlash(__('Unable to update your post.'));
@@ -61,7 +63,7 @@ class StudentCalendarYearsController extends AppController {
 	}
 
 	public function delete($id) {
-		$this -> StudentCalendarYear -> delete($id);
+		$this -> StudentCalendarSem -> delete($id);
 		$this -> render(false);
 	}
 

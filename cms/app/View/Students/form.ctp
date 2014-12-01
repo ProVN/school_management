@@ -122,7 +122,8 @@
 						 <fieldset>
 						  	<legend>Thông tin thêm</legend>							
 							<div id="thong_tin_khac">
-								<?php foreach($this->data['StudentInfo'] as $key => $value):?>
+								<?php if(isset($this->data['StudentInfo'])):?>
+								<?php foreach($this->data['StudentInfo'] as $key => $value){?>
 									<div class="control-group">
 							  			<label class="control-label" for="typeahead">
 							  				<input name="data[StudentInfo][name][]" type="text" class="span12 typeahead" value="<?php echo $value['name']?>"></input>
@@ -131,7 +132,7 @@
 								  		<input name="data[StudentInfo][value][]" type="text" class="span12 typeahead" value="<?php echo $value['value']?>"></input>
 								  	</div>
 								</div>
-								<?php endforeach?>
+								<?php } endif?>
 							</div>
 							
 							<button class="btn btn-success" type="button" onclick="addRow()">

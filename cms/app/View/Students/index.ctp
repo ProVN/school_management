@@ -103,7 +103,7 @@
 										<i class="icon-edit icon-white"></i>  
 										Xem tài liệu                            	                
 									</a>
-									<a class="btn btn-primary" href="/StudentCalendarYears/index/<?php echo $item['Student']['id']?>/">
+									<a class="btn btn-primary" href="/student_calendar_years/index/<?php echo $item['Student']['id']?>/">
 										<i class="icon-calendar icon-white"></i>  
 										Thời khóa biểu                            	                
 									</a>

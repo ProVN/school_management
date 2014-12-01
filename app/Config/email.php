@@ -96,7 +96,7 @@ class EmailConfig {
         'host' => 'ssl://smtp.gmail.com',
         'port' => 465,
         'username' => 'gconnecteducation17tx@gmail.com',
-        'password' => '123@@@123',
+        'password' => '789abcdef',
         'transport' => 'Smtp'
     );
 }

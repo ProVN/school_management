@@ -34,7 +34,6 @@ class FeedBacksController extends AppController {
 			$this->redirect("/");
 		}
 		else {
-			$this->FeedBack->save($this->data);			
 			$email_port = $this->Config->find('first',array('conditions'=>array('name'=>'email_port')));
 			$email_host = $this->Config->find('first',array('conditions'=>array('name'=>'email_host')));
 			$email_username = $this->Config->find('first',array('conditions'=>array('name'=>'email_username')));	
@@ -42,9 +41,9 @@ class FeedBacksController extends AppController {
 			$email_received = $this->Config->find('first',array('conditions'=>array('name'=>'email_received')));			
 			$email = new CakeEmail('gmail');
         	$email->to($email_received['Config']['value']);			
-        	$email->subject($this->data['Feedback']['title']);
+        	$email->subject($_POST['title']);
         	$email->from ('your_user@gmail.com');			
-			$email->send($this->data['Feedback']['comment']);
+			$email->send($_POST['comment']);
 			echo 'success';
 			exit();
 		}
