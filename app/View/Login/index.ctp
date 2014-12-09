@@ -8,9 +8,9 @@
 		<div>
 		<?php endif?>
 		
-		<form id="form" action="/login/" class="form-inline" method="post">
+		<form id="form" class="form-inline" method="post">
 	    			<div class="form-group">
-						<input type="text" name="student_code" placeholder="Mã số học viên" class="form-control"/>
+						<input type="text" name="student_code" placeholder="Mã đăng nhập" class="form-control"/>
 					</div>
 					<div class="form-group">
 						<input type="password" name="password" placeholder="Mật khẩu" class="form-control"/>

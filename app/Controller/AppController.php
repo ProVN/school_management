@@ -39,10 +39,10 @@ class AppController extends Controller {
 	{
 		if($this->params['controller'] == 'login') return;
 		$student = $this->Session->read('STUDENT');
-		if($student == null || empty($student)) {
-			$this->set('G\'Connect Education');
-			$this->redirect('/login/');
-		}
+		// if($student == null || empty($student)) {
+			// $this->set('G\'Connect Education');
+			// $this->redirect('/login/');
+		// }
 		$this->set('website_title',$student['Student']['name'].' - G\'Connect Education');
 		$this->set('student',$student);
 		
@@ -56,8 +56,26 @@ class AppController extends Controller {
 		$this->set('calendars',$calendar);
 	} 
 	
-	function sendMail($content)
+	function sendMail($title, $content)
 	{
-		
+		$email_port = $this->Config->find('first',array('conditions'=>array('name'=>'email_port' )));
+		$email_host = $this->Config->find('first',array('conditions'=>array('name'=>'email_host')));
+		$email_username = $this->Config->find('first',array('conditions'=>array('name'=>'email_username')));
+		$email_password = $this->Config->find('first',array('conditions'=>array('name'=>'email_password')));
+		$email_received = $this->Config->find('first',array('conditions'=>array('name'=>'email_received')));
+		$email = new CakeEmail('gmail');
+
+		// $email->smtpOptions(array(
+		// 'host' => $email_host,
+		// 'port' => $email_port,
+		// 'username' => $email_username,
+		// 'password' => $email_password,
+		// ));
+
+		$email->to($email_received['Config']['value']);
+		$email->subject($title);
+		$email->from ('your_user@gmail.com');
+		$email->send($content);
 	}
 }
+	

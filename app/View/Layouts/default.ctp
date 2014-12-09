@@ -454,9 +454,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 <div class="cd-tabs">
 	<nav>
-		<ul class="cd-tabs-navigation" style="height:30px">
+		<ul class="cd-tabs-navigation" >
 			<?php foreach($calendars as $key => $item) :?>
-			<li style="background-color:#FF4343; color:white"><a data-content="content_<?php echo $item['StudentCalendarYear']['id']?>" <?php if($key==0) {?> class="selected"  <?php }?>href="#0" style="font-size: 10pt"><?php echo $item['StudentCalendarYear']['name']?></a></li>
+			<li style="background-color:#FF4343; color:white;"><a data-content="content_<?php echo $item['StudentCalendarYear']['id']?>" <?php if($key==0) {?> class="selected"  <?php }?>href="#0" style="font-size: 10pt; height:30px"><?php echo $item['StudentCalendarYear']['name']?></a></li>
 			<?php endforeach?>
 		</ul> <!-- cd-tabs-navigation -->
 	</nav>

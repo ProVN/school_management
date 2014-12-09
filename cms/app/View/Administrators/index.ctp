@@ -46,7 +46,7 @@
 						  <thead>
 							  <tr>
 							  	  <th>Số thứ tự</th>
-								  <th>UserName</th>
+								  <th>Username</th>
 								  <th>Password</th>
 								  <th></th>
 							  </tr>

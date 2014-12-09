@@ -6318,3 +6318,250 @@ Stack Trace:
 #3 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(SchoolsController), Object(CakeRequest))
 #4 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2014-12-09 03:42:26 Error: [MissingActionException] Action AdministratorsController::logout() could not be found.
+Exception Attributes: array (
+  'controller' => 'AdministratorsController',
+  'action' => 'logout',
+)
+Request URL: /administrators/logout/
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AdministratorsController), Object(CakeRequest))
+#2 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-09 03:43:21 Error: [MissingActionException] Action AdministratorsController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'AdministratorsController',
+  'action' => 'login',
+)
+Request URL: /administrators/login
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AdministratorsController), Object(CakeRequest))
+#2 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-09 03:43:23 Error: [MissingActionException] Action AdministratorsController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'AdministratorsController',
+  'action' => 'login',
+)
+Request URL: /administrators/login
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AdministratorsController), Object(CakeRequest))
+#2 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-09 03:44:14 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /login
+Stack Trace:
+#0 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-09 03:44:37 Error: [MissingActionException] Action AdministratorsController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'AdministratorsController',
+  'action' => 'login',
+)
+Request URL: /login
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\GitHub\school_management\cms\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AdministratorsController), Object(CakeRequest))
+#2 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-09 04:02:28 Error: Fatal Error (1): Call to undefined method AdministratorsController::layout() in [D:\GitHub\school_management\cms\app\Controller\AdministratorsController.php, line 60]
+2014-12-09 04:02:28 Error: [FatalErrorException] Call to undefined method AdministratorsController::layout()
+Request URL: /login
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#2 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#3 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-09 04:03:39 Error: Fatal Error (1): Call to undefined method AdministratorsController::layout() in [D:\GitHub\school_management\cms\app\Controller\AdministratorsController.php, line 60]
+2014-12-09 04:03:39 Error: [FatalErrorException] Call to undefined method AdministratorsController::layout()
+Request URL: /login
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#2 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#3 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-09 04:04:52 Error: Fatal Error (1): Call to undefined method AdministratorsController::layout() in [D:\GitHub\school_management\cms\app\Controller\AdministratorsController.php, line 60]
+2014-12-09 04:04:52 Error: [FatalErrorException] Call to undefined method AdministratorsController::layout()
+Request URL: /login
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#2 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#3 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-09 04:12:52 Error: Fatal Error (1): Call to undefined method AdministratorsController::layout() in [D:\GitHub\school_management\cms\app\Controller\AdministratorsController.php, line 60]
+2014-12-09 04:12:52 Error: [FatalErrorException] Call to undefined method AdministratorsController::layout()
+Request URL: /login
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#2 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#3 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-09 04:16:20 Error: Fatal Error (1): Call to undefined method AdministratorsController::layout() in [D:\GitHub\school_management\cms\app\Controller\AdministratorsController.php, line 60]
+2014-12-09 04:16:20 Error: [FatalErrorException] Call to undefined method AdministratorsController::layout()
+Request URL: /login
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#2 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#3 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-09 04:16:25 Error: Fatal Error (1): Call to undefined method AdministratorsController::layout() in [D:\GitHub\school_management\cms\app\Controller\AdministratorsController.php, line 60]
+2014-12-09 04:16:25 Error: [FatalErrorException] Call to undefined method AdministratorsController::layout()
+Request URL: /login
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#2 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#3 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-09 04:28:29 Error: Fatal Error (1): Call to undefined method AdministratorsController::layout() in [D:\GitHub\school_management\cms\app\Controller\AdministratorsController.php, line 60]
+2014-12-09 04:28:29 Error: [FatalErrorException] Call to undefined method AdministratorsController::layout()
+Request URL: /login
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#2 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#3 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-09 04:28:30 Error: Fatal Error (1): Call to undefined method AdministratorsController::layout() in [D:\GitHub\school_management\cms\app\Controller\AdministratorsController.php, line 60]
+2014-12-09 04:28:30 Error: [FatalErrorException] Call to undefined method AdministratorsController::layout()
+Request URL: /login
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#2 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#3 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-09 04:28:30 Error: Fatal Error (1): Call to undefined method AdministratorsController::layout() in [D:\GitHub\school_management\cms\app\Controller\AdministratorsController.php, line 60]
+2014-12-09 04:28:30 Error: [FatalErrorException] Call to undefined method AdministratorsController::layout()
+Request URL: /login
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#2 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#3 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-09 04:28:30 Error: Fatal Error (1): Call to undefined method AdministratorsController::layout() in [D:\GitHub\school_management\cms\app\Controller\AdministratorsController.php, line 60]
+2014-12-09 04:28:30 Error: [FatalErrorException] Call to undefined method AdministratorsController::layout()
+Request URL: /login
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#2 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#3 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-09 04:28:30 Error: Fatal Error (1): Call to undefined method AdministratorsController::layout() in [D:\GitHub\school_management\cms\app\Controller\AdministratorsController.php, line 60]
+2014-12-09 04:28:30 Error: [FatalErrorException] Call to undefined method AdministratorsController::layout()
+Request URL: /login
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#2 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#3 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-09 04:44:48 Error: Fatal Error (1): Call to undefined method AdministratorsController::layout() in [D:\GitHub\school_management\cms\app\Controller\AdministratorsController.php, line 60]
+2014-12-09 04:44:48 Error: [FatalErrorException] Call to undefined method AdministratorsController::layout()
+Request URL: /login
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#2 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#3 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-09 04:44:58 Error: Fatal Error (1): Call to undefined method AdministratorsController::layout() in [D:\GitHub\school_management\cms\app\Controller\AdministratorsController.php, line 60]
+2014-12-09 04:44:58 Error: [FatalErrorException] Call to undefined method AdministratorsController::layout()
+Request URL: /login
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#2 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#3 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-09 04:45:44 Error: Fatal Error (1): Call to undefined method AdministratorsController::layout() in [D:\GitHub\school_management\cms\app\Controller\AdministratorsController.php, line 60]
+2014-12-09 04:45:44 Error: [FatalErrorException] Call to undefined method AdministratorsController::layout()
+Request URL: /login
+Stack Trace:
+#0 D:\GitHub\school_management\cms\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#2 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'D:\\GitHub\\schoo...', 60, Array)
+#3 D:\GitHub\school_management\cms\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-09 04:50:24 Error: [MissingControllerException] Controller class Index.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Index.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /index.html
+Stack Trace:
+#0 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-09 04:50:30 Error: [MissingControllerException] Controller class Index.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Index.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /index.html
+Stack Trace:
+#0 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-09 04:50:43 Error: [MissingControllerException] Controller class Index.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Index.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /index.html
+Stack Trace:
+#0 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-09 04:50:43 Error: [MissingControllerException] Controller class Index.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Index.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /index.html
+Stack Trace:
+#0 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-09 04:50:43 Error: [MissingControllerException] Controller class Index.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Index.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /index.html
+Stack Trace:
+#0 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-09 04:50:48 Error: [MissingControllerException] Controller class Index.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Index.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /index.html
+Stack Trace:
+#0 D:\GitHub\school_management\cms\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

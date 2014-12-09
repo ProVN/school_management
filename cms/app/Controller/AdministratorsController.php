@@ -49,5 +49,32 @@ class AdministratorsController extends AppController {
 		return $this->redirect(array('action' => 'index'));
 	}
 	
-
+	public function logout()
+	{
+		$this->Session->write('SM_LOGIN',null);
+		$this->redirect('/login');
+	}
+	
+	public function login()
+	{
+		$this->layout='empty';
+		$err_msg = "Xin vui lòng đăng nhập";
+		if(!empty($_POST))
+		{
+			$username = $_POST['username'];
+			$password = $_POST['password'];
+			
+			$data = $this->Administrator->find('first',array('conditions'=>array('username'=>$username, 'password'=>$password)));
+			
+			if(!empty($data)) {
+				$this->Session->write('SM_LOGIN',$data);
+				$this->redirect('/');
+			}
+			else {
+				$err_msg = "Tên đăng nhập hoặc mật khẩu không đúng";
+					
+			}
+		}
+		$this->set('err_msg',$err_msg);
+	}
 }

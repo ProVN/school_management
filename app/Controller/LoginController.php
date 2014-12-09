@@ -19,7 +19,7 @@
  */
 
 App::uses('AppController', 'Controller');
-
+App::uses('CakeEmail', 'Network/Email');
 /**
  * Static content controller
  *
@@ -37,8 +37,10 @@ class LoginController extends AppController {
 			$this->layout = 'login2';
 		else
         	$this->layout = 'login';
+		
   	}
 	public function index(){
+		$this->Session->write("SM_PAGE",1);
 		if(!empty($_POST)) {
 			$student_code = $_POST['student_code'];
 			$password = $_POST['password'];
@@ -56,6 +58,7 @@ class LoginController extends AppController {
 	
 	
 	public function index2(){
+		$this->Session->write("SM_PAGE",2);
 		$this->layout='login2';
 		if(!empty($_POST)) {
 			$student_code = $_POST['student_code'];
@@ -76,16 +79,32 @@ class LoginController extends AppController {
 	
 	public function forgotpassword()
 	{
+		
+		$page = $this->Session->read("SM_PAGE");
+		$this->set('page',$page);
+		if($page == 2)
+			$this->layout='login2';
+		
+		
 		if(empty($_POST)) {
 			$this->render('forgotpassword');
 		}
 		else {
+			
 			$this->render('forgotpasswordresult');
+			$student_code = $_POST['student_code'];
+			$email = $_POST['email'];
+			$conent = 'Bạn có 1 yêu cầu cấp lại mật khẩu từ sinh viên có mã số: '.$student_code.'.Xin gửi mật khẩu mới về địa chỉ email: '.$email;			
+			$this->sendMail('Yêu cầu cấp lại mật khẩu', $conent);		
 		}
 	}
 	
 	public function logout(){
+		$page = $this->Session->read("SM_PAGE");
+		if($page == 2)
+			$this->redirect('/customerseg/');
+		else 
+			$this->redirect('/customerlhe/');
 		$this->Session->write('STUDENT',null);
-		$this->redirect('/login/');
 	}
 }

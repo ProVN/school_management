@@ -1,6 +1,6 @@
-<form action="/login/forgotpassword/" class="form-inline" method="post">
+<form class="form-inline" method="post">
 	<div class="form-group">
-		<input required="true" name="student_code" type="text" placeholder="Mã số học viên" class="form-control"/>
+		<input required="true" name="student_code" type="text" placeholder="Mã đăng nhập" class="form-control"/>
 	</div>
 	<div class="form-group">
 		<input required="true" name="email" type="email" placeholder="Email" class="form-control"/>
@@ -14,5 +14,9 @@
 </form>
 
 <div style="margin-top: 20px">
-	<a href="/login/">Quay lại</a>
+	<?php if($page == 2):?>
+	<a href="/customerseg/">Quay lại</a>
+	<?php else :?>
+	<a href="/customerlhe/">Quay lại</a>
+	<?php endif?>	
 </div>

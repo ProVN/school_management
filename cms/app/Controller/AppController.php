@@ -36,6 +36,11 @@ class AppController extends Controller {
 	 
 	 function beforeRender()
 	 {
+	 	$admin = $this->Session->read('SM_LOGIN');
+	 	if(empty($admin) && ($this->params['action'] != 'login'))
+		{
+			$this->redirect('/login');
+		}
 	 	$this->set('db_result_mode', isset($_GET['result'])? $_GET['result']: null);
 	 }
 	 

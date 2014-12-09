@@ -105,8 +105,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Thông tin</a></li>
-						<li class="divider"></li>
 						<li><a href="/administrators/logout/">Thoát</a></li>
 					</ul>
 				</div>
