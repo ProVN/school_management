@@ -61,6 +61,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<!-- jQuery UI -->
 	<script src="/js/jquery-ui-1.8.21.custom.min.js"></script>
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script src="//cdn.ckeditor.com/4.4.6/standard/ckeditor.js"></script>
 </head>
 <body>
 	<!-- topbar starts -->
@@ -72,7 +73,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="index.html"> 
+				<a class="brand" href="/"> 
 					<?php echo $this->Html->image('logo20.png')?>
 					<span>School</span></a>
 				
@@ -142,7 +143,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 						<li><a class="ajax-link" href="/countries/"><i class="icon-list-alt"></i><span class="hidden-tablet"> Quốc gia</span></a></li>
 						<li><a class="ajax-link" href="/administrators/"><i class="icon-calendar"></i><span class="hidden-tablet"> Quản trị viên</span></a></li>
 						<li><a class="ajax-link" href="/contacts/"><i class="icon-calendar"></i><span class="hidden-tablet"> Liên hệ</span></a></li>
-						<li><a class="ajax-link" href="/configs/"><i class="icon-calendar"></i><span class="hidden-tablet"> Thiết lập mail</span></a></li>
 					</ul>
 					<!--<label id="for-is-ajax" class="hidden-tablet" for="is-ajax"><input id="is-ajax" type="checkbox"> Ajax on menu</label>-->
 				</div><!--/.well -->

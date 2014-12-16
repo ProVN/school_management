@@ -8,7 +8,7 @@ class DocumentsController extends AppController {
 		$this->set('student_id',$student_id);
 	}
 
-	public function add($student_id) {
+	public function add($student_id, $doc_type) {
 		$this->prepareData();
 		if (empty($this -> data)) {
 			$this -> set('student_id',$student_id);
@@ -16,6 +16,7 @@ class DocumentsController extends AppController {
 		} else {
 			if ($this->request->is('post')) {
 				$data = $this->data;
+				$data['Document']['doc_type'] = $doc_type;
 				$file = $data['Document']['file_url'];
 		     	if($file['error'] == 0) {
 					//$file_ext = pathinfo($file['name'], PATHINFO_EXTENSION);
@@ -41,6 +42,7 @@ class DocumentsController extends AppController {
 		if ($document == null) {
 			$this -> redirect_to_main_page();
 		} else {
+			$this->set('student_id',$document['Document']['student_id']);
 			if (empty($this -> data)) {
 				$this -> data = $document;
 				$this -> render('form');
@@ -73,7 +75,7 @@ class DocumentsController extends AppController {
 	
 	private function prepareData()
 	{
-		$doc_type_list = array('0'=>'Trạng thái hồ sơ', '1'=>'Tải xuống');		
+		$doc_type_list = array('1'=>'Trạng thái hồ sơ', '2'=>'Tải xuống');		
 		$this->set('doc_type_list',$doc_type_list);
 	}
 

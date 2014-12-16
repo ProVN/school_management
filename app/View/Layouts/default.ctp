@@ -90,6 +90,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<link rel="stylesheet" href="/css/reset.css"> <!-- CSS reset -->
 		<link rel="stylesheet" href="/css/style.css"> <!-- Resource style -->
 		<script src="/js/modernizr.js"></script> <!-- Modernizr -->
+		
     </head>
 
     <body>
@@ -170,6 +171,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         
         <!-- End Name -->  
     </div>
+    
     <?php if($student['School']['logo'] && $student['School']['logo'] != ''):?>
      <div id="profile_social" style="position: absolute; bottom: 0px">
              <div class="school_logo" style="background-color:white; padding:10px; padding-top:20px; padding-bottom:20px;">
@@ -179,7 +181,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
     			
     		</div>
      </div>
-     <?php endif?>
+     <?php endif ?>
 </div>                                </div>
 
                                 <div class="col-md-9 flexy_content" style="padding-left: 0;padding-right: 0;">
@@ -266,10 +268,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                 <i class="glyphicon glyphicon-calendar"></i>
                 <label>Ngày sinh</label>
                 <span class="value">               	
-                	<?php 
-                		$date = date_create($student['Student']['birthday']);
-						$result = $date->format('d/m/Y');
-						echo $result;
+                	<?php $date = date_create($student['Student']['birthday']);
+					$result = $date -> format('d/m/Y');
+					echo $result;
                 	?>
                 </span>
                 <div class="clear"></div>
@@ -302,7 +303,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                 <span class="value"><?php echo $item['value']?></span>
                 <div class="clear"></div>
             </li>    
-            <?php endforeach?>
+            <?php endforeach ?>
         </ul>
         <p style="margin-bottom:20px">
                  
@@ -352,7 +353,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         			<?php 
         			$index = 0;
         			foreach ($student['Document'] as $key => $item):
-						if($item['doc_type']!='0') continue;
+						if($item['doc_type']!='1') continue;
         				$index++;
         				$link_download = ($item['url']==null || $item['url']=='')?"#":'/upload/documents/'.$item['url'];
         				?>						
@@ -363,12 +364,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         				<td>
         					<?php if($link_download == "#"):?>
         					<span style="color:gray">Tải về</span>
-        					<?php else:?>
+        					<?php else: ?>
         						<a href="<?php echo $link_download?>" target="_blank">Tải về</a>
-        					<?php endif?>
+        					<?php endif ?>
         				</td>
         			</tr>
-        			<?php endforeach?>
+        			<?php endforeach ?>
         		</tbody>
         	</table>
         </div>
@@ -417,7 +418,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         			<?php 
         			$index = 0;
         			foreach ($student['Document'] as $key => $item):
-						if($item['doc_type']!='1') continue;
+						if($item['doc_type']!='2') continue;
         				$index++;
 						$link_download = ($item['url']==null || $item['url']=='')?"#":'/upload/documents/'.$item['url'];
         				?>						
@@ -427,12 +428,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         				<td>
         					<?php if($link_download == "#"):?>
         					<span style="color:gray">Tải về</span>
-        					<?php else:?>
+        					<?php else: ?>
         						<a href="<?php echo $link_download?>" target="_blank">Tải về</a>
-        					<?php endif?>
+        					<?php endif ?>
         				</td>
         			</tr>
-        			<?php endforeach?>
+        			<?php endforeach ?>
         		</tbody>
         	</table>
         	
@@ -456,24 +457,24 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<nav>
 		<ul class="cd-tabs-navigation" >
 			<?php foreach($calendars as $key => $item) :?>
-			<li style="background-color:#FF4343; color:white;"><a data-content="content_<?php echo $item['StudentCalendarYear']['id']?>" <?php if($key==0) {?> class="selected"  <?php }?>href="#0" style="font-size: 10pt; height:30px"><?php echo $item['StudentCalendarYear']['name']?></a></li>
-			<?php endforeach?>
+			<li style="background-color:#FF4343; color:white;"><a data-content="content_<?php echo $item['StudentCalendarYear']['id']?>" <?php if($key==0) {?> class="selected"  <?php } ?>href="#0" style="font-size: 10pt; height:30px"><?php echo $item['StudentCalendarYear']['name']?></a></li>
+			<?php endforeach ?>
 		</ul> <!-- cd-tabs-navigation -->
 	</nav>
 
 	<ul class="cd-tabs-content" style="height:420px">
 		<?php foreach($calendars as $key => $item) :?>		
-		<li data-content="content_<?php echo $item['StudentCalendarYear']['id']?>" <?php if($key==0) {?> class="selected"  <?php }?>>
+		<li data-content="content_<?php echo $item['StudentCalendarYear']['id']?>" <?php if($key==0) {?> class="selected"  <?php } ?>>
 			<div class="accordion">
 				<?php foreach($item['StudentCalendarSem'] as $key1 => $item1):?>				
 				<h3><?php echo $item1['name']?></h3>
 				<div style="height:300px !important;">
 					<?php echo $item1['content']?>					
 				</div>						
-				<?php endforeach?>
+				<?php endforeach ?>
 			</div>
 		</li>			
-		<?php endforeach?>
+		<?php endforeach ?>
 	</ul> <!-- cd-tabs-content -->
 </div> <!-- cd-tabs -->
 
@@ -555,7 +556,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 
                                                             <div id="contact-status"></div>
-															<?php echo $this->Form->create('FeedBack', array('id'=>'contactform'))?>
+															<?php echo $this->Form->create('FeedBack2', array('id'=>'contactform'))?>
                                                             	<?php echo $this->Form->input('student_id', array('value'=>$student['Student']['id'],'type'=>'hidden'))?>
                                                             	
                                                                 <p class="form-group" id="contact-name">
@@ -574,6 +575,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                                                                 <div id="loading" style="float:left; margin-top: 10px; margin-left: 10px; display:none">Sending, Please wait....</div>
                                                             <?php echo $this->Form->end()?>
                                                         </div>
+                                                        
                                                         <!-- /Contact Form -->
                                                     </div>
                                                 </div>
@@ -608,6 +610,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
             <!-- End Content -->
 
         </div>
+        
         <!-- End wrapper -->
 
         <!-- Switcher -->
@@ -739,6 +742,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
         <!-- jquery | jQuery 1.11.0 -->
         <!-- Credits: http://jquery.com -->
+        
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
  		
         <!-- Js | bootstrap -->
@@ -827,13 +831,13 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				imageOne.setImageDirection();
 
 			}
-			
-			 $(function() {
-				$( ".accordion" ).accordion({
-					heightStyle:"content"
+
+			$(function() {
+				$(".accordion").accordion({
+					heightStyle : "content"
 				});
 			});
-
+			
         </script>
 
 

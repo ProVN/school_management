@@ -1,3 +1,4 @@
+
 		<div class="row-fluid sortable">
 				<div class="box span12">
 					<div class="box-header well" data-original-title>
@@ -28,7 +29,7 @@
 							<div class="control-group">
 							  <label class="control-label" for="typeahead">Nội dung</label>
 							  <div class="controls">
-							  	<?php echo $this->Form->input('content', array('label'=>false, 'class'=>'cleditor', 'type'=>'textarea'))?>
+							  	<?php echo $this->Form->input('content', array('label'=>false, 'type'=>'textarea', 'id'=>'editor1'))?>
 							  </div>
 							</div>
 							
@@ -41,3 +42,9 @@
 					</div>
 				</div><!--/span-->
 			</div><!--/row-->
+			
+ <script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.replace( 'editor1' );
+            </script>

@@ -385,8 +385,10 @@ Cache::config('_cake_model_', array(
 	'duration' => $duration
 ));
 
+
 Configure::write('FRONT_END_WEBSITE_URL','http://sm.gconnect.edu.vn/');
 Configure::write('FRONT_END_FTP_URL','gconnect.edu.vn');
 Configure::write('FRONT_END_FTP_UID','gconnect');
-Configure::write('FRONT_END_FTP_PWD','123456');
+Configure::write('FRONT_END_FTP_PWD','789abcdef@');
 Configure::write('FRONT_END_FTP_ROOT','/public_html/sm/');
+

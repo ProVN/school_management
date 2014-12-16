@@ -64,13 +64,24 @@
  */
 class DATABASE_CONFIG {
 
+	// public $default = array(
+		// 'datasource' => 'Database/Mysql',
+		// 'persistent' => false,
+		// 'host' => 'krea.vn',
+		// 'login' => 'ifu5448c_baloc',
+		// 'password' => 'thaohoang',
+		// 'database' => 'ifu5448c_schoolmanager',
+		// 'prefix' => '',
+		// //'encoding' => 'utf8',
+	// );
+	
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'krea.vn',
-		'login' => 'ifu5448c_baloc',
+		'host' => 'gconnect.edu.vn',
+		'login' => 'gconnect_sm',
 		'password' => 'thaohoang',
-		'database' => 'ifu5448c_schoolmanager',
+		'database' => 'gconnect_schoolmanagement',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);

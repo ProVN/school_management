@@ -54,7 +54,7 @@
 						  	<?php foreach($datasource as $key => $item):?>
 							<tr>
 								<td class="center">
-									<img src='<?php echo Configure::read('FRONT_END_WEBSITE_URL')?>upload/img/schools/<?php echo $item['School']['logo']?>' style="width:100px" />
+									<img src='<?php echo $FRONT_END_WEBSITE_URL?>upload/img/schools/<?php echo $item['School']['logo']?>' style="width:100px" />
 									
 								</td>
 								<td class="center"><?php echo $item['School']['name']?></td>

@@ -47,7 +47,12 @@ class LoginController extends AppController {
 			$student = $this->Student->find('first',array('conditions'=>array('code'=>$student_code, 'password'=>$password)));
 			
 			if(!empty($student)) {
-				$this->Session->write('STUDENT',$student);
+				$this->Session->write('STUDENT',$student);				
+				$logincnt = $student['Student']['login_cnt'];
+				$logincnt++;
+				$student['Student']['login_cnt'] = $logincnt;
+				$student['Student']['lastlogin'] = date('Y-m-d h:i:s');
+				$this->Student->save($student);
 				$this->redirect("/");
 			} 
 			else {
@@ -67,6 +72,11 @@ class LoginController extends AppController {
 			
 			if(!empty($student)) {
 				$this->Session->write('STUDENT',$student);
+				$logincnt = $student['Student']['login_cnt'];
+				$logincnt++;
+				$student['Student']['login_cnt'] = $logincnt;
+				$student['Student']['lastlogin'] = date('Y-m-d h:i:s');
+				$this->Student->save($student);
 				$this->redirect("/");
 			} 
 			else {

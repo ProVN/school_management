@@ -78,6 +78,8 @@
 								  <th>Trường</th>
 								  <th>Quốc gia</th>
 								  <th>Ngày tạo</th>
+								  <th>Lần đăng nhập cuối</th>
+								  <th>Số lần đăng nhập</th>
 								  <th></th>
 							  </tr>
 						  </thead>   
@@ -90,6 +92,8 @@
 								<td class="center"><?php echo $item['School']['name']?></td>
 								<td class="center"><?php echo $item['Country']['name']?></td>
 								<td class="center"><?php echo $item['Student']['create_date']?></td>
+								<td class="center"><?php echo $item['Student']['lastlogin']?></td>
+								<td class="center"><?php echo $item['Student']['login_cnt']?></td>
 								<td class="center" style="width:380px">
 									<a class="btn btn-info" href="/students/edit/<?php echo $item['Student']['id']?>/">
 										<i class="icon-edit icon-white"></i>  

@@ -39,10 +39,10 @@ class AppController extends Controller {
 	{
 		if($this->params['controller'] == 'login') return;
 		$student = $this->Session->read('STUDENT');
-		// if($student == null || empty($student)) {
-			// $this->set('G\'Connect Education');
-			// $this->redirect('/login/');
-		// }
+		if($student == null || empty($student)) {
+			$this->set('G\'Connect Education');
+			$this->redirect('/login/');
+		}
 		$this->set('website_title',$student['Student']['name'].' - G\'Connect Education');
 		$this->set('student',$student);
 		

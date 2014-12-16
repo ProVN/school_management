@@ -42,6 +42,8 @@ class AppController extends Controller {
 			$this->redirect('/login');
 		}
 	 	$this->set('db_result_mode', isset($_GET['result'])? $_GET['result']: null);
+		$FRONT_END_WEBSITE_URL = Configure::read('FRONT_END_WEBSITE_URL');
+		$this->set('FRONT_END_WEBSITE_URL', $FRONT_END_WEBSITE_URL);
 	 }
 	 
 	 function afterRender()
@@ -67,11 +69,15 @@ class AppController extends Controller {
 	 
 	 function uploadfile($source_file,$server_file_path)
 	 {
-	 	$ftp_root = Configure::read('FRONT_END_FTP_ROOT');
+		$FRONT_END_FTP_URL = Configure::read('FRONT_END_FTP_URL');
+		$FRONT_END_FTP_UID = Configure::read('FRONT_END_FTP_UID');	
+		$FRONT_END_FTP_PWD = Configure::read('FRONT_END_FTP_PWD');		
+		$FRONT_END_FTP_ROOT = Configure::read('FRONT_END_FTP_ROOT');		
+	 	$ftp_root = $FRONT_END_FTP_ROOT;
 		$remote_file = $ftp_root.'app/webroot/'.$server_file_path;		
-		$ftp_server = Configure::read('FRONT_END_FTP_URL');
-		$ftp_user_name = Configure::read('FRONT_END_FTP_UID');
-		$ftp_user_pass = Configure::read('FRONT_END_FTP_PWD');
+		$ftp_server = $FRONT_END_FTP_URL;
+		$ftp_user_name = $FRONT_END_FTP_UID;
+		$ftp_user_pass = $FRONT_END_FTP_PWD;
 		$return_val = false;
 		// set up basic connection
 		$conn_id = ftp_connect($ftp_server);
@@ -79,6 +85,7 @@ class AppController extends Controller {
 		$login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
 		// upload a file
 		// ftp_delete($conn_id, $remote_file);
+		echo $source_file;
 		if (ftp_put($conn_id, $remote_file, $source_file, FTP_BINARY))
 		 	$return_val = true;
 		// close the connection

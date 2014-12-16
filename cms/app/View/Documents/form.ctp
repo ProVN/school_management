@@ -23,12 +23,6 @@
 								<?php echo $this->Form->input('student_id', array('label'=>false, 'type'=>'hidden'))?>
 							<?php endif?>
 							<div class="control-group">
-							  <label class="control-label" for="typeahead">Loại tài liệu</label>
-							  <div class="controls">
-							  	<?php echo $this->Form->input('doc_type', array('label'=>false, 'class'=>'span7 typeahead','options'=>$doc_type_list))?>
-							  </div>
-							</div>
-							<div class="control-group">
 							  <label class="control-label" for="typeahead">Tên tài liệu</label>
 							  <div class="controls">
 							  	<?php echo $this->Form->input('name', array('label'=>false, 'class'=>'span7 typeahead'))?>

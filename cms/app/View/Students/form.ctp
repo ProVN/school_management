@@ -96,7 +96,7 @@
 							  <label class="control-label" for="typeahead">Hình đại diện (nhỏ)</label>
 							  <div class="controls">
 							  	<?php if(!empty($this->data)):?>
-							  	<img src='<?php echo Configure::read('FRONT_END_WEBSITE_URL')?>upload/img/students/<?php echo $this->data['Student']['image_small']?>' style="width:200px"/>
+							  	<img src='<?php echo $FRONT_END_WEBSITE_URL?>upload/img/students/<?php echo $this->data['Student']['image_small']?>' style="width:200px"/>
 							  	<?php endif?>
 							  	<div>
 							  		<input type="file" name="file1"/>
